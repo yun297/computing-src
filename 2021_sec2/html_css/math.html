@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<title>Math calculator</title>
+<style>
+html {
+
+	height: 100%;
+    background-color: lightskyblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1, footer {
+    text-align:center;
+}
+.box {
+	border-radius: 10px;
+    background-color: white;
+    line-height: 1.6;
+	padding: 30px 60px;
+	width:700px;
+	margin: 20px auto;
+}
+button {
+    background-color: white; /* Green */
+    border-color: lightskyblue;
+    border-width: 2px;
+    border-radius: 5px;
+    width: 100px;
+    height: 70px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: lightskyblue;
+}
+
+.fraction {
+ 	display: inline-block;
+ 	vertical-align : middle;
+ 	text-align: center;
+ 	padding : 0 0.2em;
+ }
+.fraction::before {
+ 	border-bottom: 1px solid black;
+ 	content: attr(top);
+ 	display: block;
+ 	line-height: 1.6em;
+ 	padding: 0 0.2em;
+ }
+.fraction::after {
+ 	 content: attr(bottom);
+    display: block;
+    line-height: 1.6em;
+    padding: 0 0.2em;
+ }
+</style>
+
+<script>
+function process(n) {
+    //the value of n is set by the onclick event in the HTML buttons
+    
+    answer = 0;
+    
+    //store the numerical input values into variables x and y
+    //complete the statement for the variable y
+    x = +document.getElementById("num1").value;
+    y = +document.getElementById("num2").value;
+    
+    //the final value of variable answer depend on the value of parameter n
+    //n should determine the mathematical formula to be used to calculate answer
+    if (n == 1) answer = Math.pow(x, y);    
+    
+    if (n == 2) answer = Math.pow(x, 1/y);
+
+    if (n == 3) answer = Math.pow(Math.pow(x, 2) + Math.pow(y, 2), 1/2);
+
+    if (n == 4) answer = Math.atan(y/x)
+    
+    
+    
+    //display answer in the result input box
+    //the readonly attribute of this input element prevent users from manually entering its value
+    document.getElementById('result').value = answer;
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>Calculator v2.0</h1>
+
+<div class="box">
+
+x : <input type="text" id="num1" value="" onFocus="value=''" placeholder="Enter a number here"/>
+
+<br>
+
+y : <input type="text" id="num2" value="" onFocus="value=''" placeholder="Enter a number here"/>
+
+<p>
+<button onClick="process(1)">x<sup>y</sup></button>
+<button onClick="process(2)">x<sup>1/y</sup></button>
+<button onClick="process(3)">(x<sup>2</sup> + y<sup>2</sup>)<sup>1/2</sup></button>
+<button onClick="process(4)">tan<sup>-1</sup>(<span class="fraction" top="y" bottom="x"></span>)</button>
+</p>
+
+Result :
+<input type="text" id="result" readonly />
+
+</div>
+
+
+<footer>Done by <b>Yunsong</b> &copy; 2021</footer>
+</body>
+
+</html>
