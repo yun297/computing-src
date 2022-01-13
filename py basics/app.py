@@ -532,7 +532,7 @@ from Studentv2 import Studentv2
 # studentv2_2 = Studentv2("Phyllis", "Business", 3.8)
 
 # print(studentv2_1.on_honor_roll())
-cla
+
 ###############
 # Inheritance #
 ###############
