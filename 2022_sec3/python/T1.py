@@ -1,3 +1,6 @@
+# Name: Zhu Yunsong (32)
+# Class: 3A3
+
 # Q1. Print all the numbers between 1-1000 that has at least two 00 in it.
 # Eg. 100, 1000.
 # Note that 1-1000 are integers.
