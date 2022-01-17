@@ -70,4 +70,4 @@ def fileCreateB1():
 
 # countLine()
 
-
+fileCreateB1()
