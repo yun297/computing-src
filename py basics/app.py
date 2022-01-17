@@ -435,7 +435,7 @@ employee_file = open("employees.txt", "r") # Storing as a variable
 
 # print(employee_file.readlines()) # Storing each line as a value of a list
 
-# print(employee_file.readlines()[1]) # Priting index 1 of the list
+# print(employee_file.readlines()[1]) # Printing index 1 of the list
 
 # for employee in employee_file.readlines():#
 #     print(employee) # Priting each line in the file using a for loop
