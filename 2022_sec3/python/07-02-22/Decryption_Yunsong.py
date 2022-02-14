@@ -19,6 +19,7 @@ while condition == True:
                     count += 3
                 else: # Out of range condition
                     print("The cipher text you keyed in is out of range! Please re-run the code.")
+                    condition = False
                     break
             elif cipherText[count] != "1": # Checking for 2 digit
                 slicedCipherText = int(cipherText[count] + cipherText[count + 1]) # Slice the cipher text into 2 digit
@@ -27,7 +28,9 @@ while condition == True:
                     count += 2
                 else: # Out of range condition
                     print("The cipher text you keyed in is out of range! Please re-run the code.")
+                    condition = False
                     break
                 
-        print(plainText)
+        if condition != False:
+            print(plainText)
         condition = False
