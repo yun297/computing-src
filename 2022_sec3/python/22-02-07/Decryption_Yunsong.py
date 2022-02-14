@@ -21,6 +21,7 @@ while condition == True:
                     print("The cipher text you keyed in is out of range! Please re-run the code.")
                     condition = False
                     break
+                
             elif cipherText[count] != "1": # Checking for 2 digit
                 slicedCipherText = int(cipherText[count] + cipherText[count + 1]) # Slice the cipher text into 2 digit
                 if 33 <= slicedCipherText <= 126:
