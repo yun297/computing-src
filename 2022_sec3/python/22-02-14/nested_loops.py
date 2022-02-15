@@ -1,7 +1,7 @@
 # Times Table
 for i in range(1,11):
-    for x in range(1,11):
-        print(i*x, end=" ")
+    for j in range(1,11):
+        print(i*j, end=" ")
     print("")
 print("\n")
     
@@ -14,13 +14,21 @@ print("\n")
 
 # 5x5 Star Triangle
 for i in range(5):
-    for x in range(i + 1):
+    for j in range(i + 1):
         print("* ", end=" ")
     print("")
 print("\n")
 
 # 5x5 Star Upside-down Triangle
 for i in range(5):
-    for x in range(5 - i):
+    for j in range(5 - i):
         print("* ", end=" ")
+    print("")
+    
+# 5x5 Star Inversed Triangle
+for i in range(5):
+    for j in range(5-i-1):
+        print("   ",end="")
+    for k in range(i+1):
+        print("* ",end=" ")
     print("")
