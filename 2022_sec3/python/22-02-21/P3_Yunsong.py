@@ -57,7 +57,7 @@ def Q4():
     smallBricks = int(input("Enter the number of small bricks: "))
     largeBricks = int(input("Enter the number of large bricks: "))
     
-    largeBricks += (smallBricks // 5)
+    largeBricks += smallBricks // 5
     largeFromSmall = smallBricks // 5
     smallBricks -= largeFromSmall * 5
     
