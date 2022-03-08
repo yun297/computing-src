@@ -17,7 +17,7 @@ set.seed(1)  # Fix a seed for reproducibility
 rand <- sample(nrow(d2))
 rand
 d2 <- d2[rand,]
-d2half <- d2[rand[1:25],]
+d2half <- d2[rand[1:25], ]
 
 # Merge
 merge(d1, d2) # The merge function uses the common column to merge two datasets.
@@ -36,8 +36,7 @@ setwd("D:/School/Computing Module/computing-private/2022_sec3/data_science_sabba
 mrt <- read.csv("mrtsg.csv") # Reads data
 
 ### QUIZ TIME ###
-
-mrt[sort(mrt$STN_NAME),]
+mrt[order(mrt$STN_NAME),]
 
 
 
