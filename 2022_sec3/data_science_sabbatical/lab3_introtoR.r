@@ -46,7 +46,7 @@ x[x > 10]       # returns the values in x that are greater than 10
 x[x %% 2 == 0]  # returns the even numbers in x
 
 
-# AND/OR: What if we have more than one criteria? 
+# AND/OR: What if we have more than one criteria?
 (x > 10) & (x %% 2 == 0)
 (x > 10) | (x %% 2 == 0)
 # Use & for AND, | for OR
@@ -62,7 +62,7 @@ x[(x > 10) | (x %% 2 == 0)]
 # The "datasets" library is a dedicated library of example datasets.
 library(datasets)
 # If you can't load the library, you have to install it first.
-install.packages("datasets")
+# install.packages("datasets")
 
 # Pick an interesting dataset. See complete list of datasets here:
 library(help = "datasets")
@@ -92,6 +92,10 @@ d[d$Murder >= 15,] # Call the rows in which the values of "Murder" are greater t
 sort(d$Murder)       # Sort the "Murder" column only
 order(d$Murder)      # Order the indices of the "Murder" column
 d[order(d$Murder),]  # Sort entire dataset in increasing order of their "Murder" values
+
+dord <- d[order(d$Assault, decreasing = TRUE),]
+
+head(dord, 5)
 
 # Summarising data
 summary(d)           # Shows quantile and mean
