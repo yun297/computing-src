@@ -37,7 +37,7 @@ mrt <- read.csv("mrtsg.csv") # Reads data
 
 ### QUIZ TIME ###
 mrt[order(mrt$STN_NAME),]
-
+mrt$STN_NAME[duplicated(mrt$STN_NAME)]
 
 
 
