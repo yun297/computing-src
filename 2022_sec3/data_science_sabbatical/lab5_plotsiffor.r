@@ -3,22 +3,22 @@
 #########################
 
 # Let's plot the data which we collected from Wikipedia earlier
-plot(x = records$Date, y = records$Time, 
-     main = "100m Sprint World Records Progression", 
+plot(x = records$Date, y = records$Time,
+     main = "100m Sprint World Records Progression",
      xlab = "Year", ylab = "100m Sprint Times"
 )
 
 # R also has libraries that help make better plots
 library(ggplot2) # May need to install a new library using install.packages('ggplot2')
-qplot(x = records$Date, y = records$Time, 
-      main = "100m Sprint World Records Progression", 
+qplot(x = records$Date, y = records$Time,
+      main = "100m Sprint World Records Progression",
       xlab = "Year", ylab = "100m Sprint Times"
 )
 
 # Line and Point plot
-qplot(x = records$Date, y = records$Time, 
-      main = "100m Sprint World Records Progression", 
-      xlab = "Year", ylab = "100m Sprint Times", 
+qplot(x = records$Date, y = records$Time,
+      main = "100m Sprint World Records Progression",
+      xlab = "Year", ylab = "100m Sprint Times",
       geom = c("point", "line")
 )
 
@@ -38,7 +38,7 @@ if (sum(x) > 50){
 x
 
 # Guess what happens?
-for (i in 1:length(x)){
+for (i in 1:length(x)) {
   x[i] <- x[i] * 2
   print(i)
   print(x)
