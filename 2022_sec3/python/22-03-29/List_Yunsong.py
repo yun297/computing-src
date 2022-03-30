@@ -65,37 +65,43 @@ def Q4():
     
     # The pair with the biggest and smallest sum of both numbers
     
+    Q4L1.sort()
+    print(Q4L1[0])
+    print(Q4L1[-1])
+    
     ## Defining variables
     
-    tempPair = []
-    tempSum = 0
-    minPair = []
-    minSum = 16
-    maxPair = []
-    maxSum = 0
+    # tempPair = []
+    # tempSum = 0
+    # minPair = []
+    # minSum = 16
+    # maxPair = []
+    # maxSum = 0
     
-    ## Finding the pair with the smallest sum of both numbers
+    # ## Finding the pair with the smallest sum of both numbers
     
-    for i in range(len(Q4L1)):
-        tempPair = Q4L1[i]
-        tempSum = Q4L1[i][0] + Q4L1[i][1]
-        if tempSum < minSum:
-            minPair = tempPair
-            minSum = tempSum
-        else:
-            continue
+    # for i in range(len(Q4L1)):
+    #     tempPair = Q4L1[i]
+    #     tempSum = Q4L1[i][0] + Q4L1[i][1]
+    #     if tempSum < minSum:
+    #         minPair = tempPair
+    #         minSum = tempSum
+    #     else:
+    #         continue
         
-    print("Min Pair: ", minPair, "Sum: ", minSum)
+    # print("Min Pair: ", minPair, "Sum: ", minSum)
     
-    ## Finding the pair with the biggest sum of both numbers
+    # ## Finding the pair with the biggest sum of both numbers
     
-    for i in range(len(Q4L1)):
-        tempPair = Q4L1[i]
-        tempSum = Q4L1[i][0] + Q4L1[i][1]
-        if tempSum > maxSum:
-            maxPair = tempPair
-            maxSum = tempSum
-        else:
-            continue
+    # for i in range(len(Q4L1)):
+    #     tempPair = Q4L1[i]
+    #     tempSum = Q4L1[i][0] + Q4L1[i][1]
+    #     if tempSum > maxSum:
+    #         maxPair = tempPair
+    #         maxSum = tempSum
+    #     else:
+    #         continue
     
-    print("Max Pair: ", maxPair, "Sum: ", maxSum)
+    # print("Max Pair: ", maxPair, "Sum: ", maxSum)
+    
+Q4()
