@@ -103,5 +103,15 @@ def Q4():
     #         continue
     
     # print("Max Pair: ", maxPair, "Sum: ", maxSum)
+
+    # Converting 2D to 1D list
+    
+    Q4L2 = []
+    
+    for i in range(len(Q4L1)):
+        for j in range(len(Q4L1[i])):
+            Q4L2.append(Q4L1[i][j])
+            
+    print(Q4L2)
     
 Q4()
