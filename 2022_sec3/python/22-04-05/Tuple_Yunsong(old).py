@@ -1,21 +1,19 @@
-T1 = (78, 45,89, 66, 90, 50, 89, 89, 90)
-T2 = (50,45,90,66)
+T1 = (78, 45, 89, 66, 90, 50, 89, 89, 90) 
+T2 = (50, 45, 90, 66)
 
 # a)
 
-def a():
-    sumT1 = sum(T1)
-    averageT1 = sumT1 / len(T1)
-    
-    sumT2 = sum(T2)
-    averageT2 = sumT2 / len(T2)
-    
-    sum = sumT1 + sumT2
-    average = sum / (len(T1) + len(T2))
-    
-    print('Average T1:', averageT1)
-    print('Average T2:', averageT2)
-    print('Average T1 and T2:', average)
+def a():    
+    sum = 0
+    average = 0
+
+    for i in T1:
+        sum += i
+    for i in T2:
+        sum += i
+    average = sum/(len(T1)/len(T2))
+
+    print('Average: ', average)
 
 # b)
 
@@ -32,7 +30,7 @@ def b():
 
     print('Largest Number:', largestNum1)
     print('Second Largest Number:', largestNum2)
-
+    
 # c)
 
 def c():
@@ -59,21 +57,30 @@ def d():
         exit()
     
     if userNum in T1:
-        print('Number is in T1.')
+        print('Number is in the list.')
     else:
-        print('Number is not in the T1.')
-        
-    if userNum in T2:
-        print('Number is in T2.')
-    else:
-        print('Number is not in the T2.')
-        
+        print('Number is not in the list.')
+    
 # e)
 
 def e():
+    # L1 = list(T1)
+    # L2 = []
+    
+    # for i in L1:
+    #     if L1.count(i)>1:
+    #         L2.append(i)
+    
+    # L2 = set(L2)
+    
+    # print('Duplicate numbers: ', end = '')
+    
+    # for i in L2:
+    #     print(i, end = ' ')
+        
     print("Duplicated numbers: ", end = '')
     [print(j, end=' ') for j in set([i for i in T1 if T1.count(i) > 1])]
-    
+        
 # f)
 
 def f():
@@ -82,12 +89,12 @@ def f():
     
     print('L1:', L1)
     print('L2:', L2)
-
+    
 # g)
 
 def g():
     print(T1[::-1])
-
+    
 # h)
 
 def h():
@@ -95,7 +102,7 @@ def h():
     print([i for i in T1 if i in T2])
     
 # i)
-    
+
 def i():
     # global T1 # For some reason T1 is not reocgnised in the function so I have to use either a new local variable iT1 or global T1
     
@@ -104,9 +111,7 @@ def i():
     iT1 = tuple(L1)
     
     print(iT1)
-
-# j)
-
+    
 def j():
     # global T1 # For some reason T1 is not reocgnised in the function so I have to use either a new local variable jT1 or global T1
     
