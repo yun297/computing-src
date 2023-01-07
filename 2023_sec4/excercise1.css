@@ -1,0 +1,37 @@
+body {
+    text-align: center;
+    align-content: center;
+    height: 100vh;
+    background-image: url(https://img.freepik.com/free-vector/christmas-background-bokeh-lights-stars_1048-9499.jpg?w=2000);
+    background-color: black;
+}
+
+h1 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 120px;
+    margin-bottom: auto;
+}
+
+h2 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 30px;
+    margin-top: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.button {
+    font-family: 'Inter Tight', sans-serif;
+    background-color: rgb(206, 189, 0);
+    text-align: center;
+    color: black;
+    width: 100px;
+    padding: 15px 30px 15px 30px;
+    border-radius: 7px;
+}

@@ -1,0 +1,38 @@
+body {
+    background-image: url(https://www.dbs.com/documents/portlet_file_entry/297834311/Christmas+2021+-+Header.jpg/5277c0f1-3f3e-6c94-2468-aff9b975614f);
+    background-size: cover;
+}
+
+.container {
+    position: absolute;
+    bottom: 50px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Big Shoulders Inline Display', cursive;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 0;
+    
+}
+
+h2 {
+    font-family: 'Big Shoulders Inline Display', cursive;
+    text-align: center;
+    color: white;
+    font-size: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    color: red;
+    font-size: 80px;
+    margin-top: -70px;
+}
