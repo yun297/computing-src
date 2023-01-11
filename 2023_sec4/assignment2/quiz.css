@@ -18,7 +18,7 @@ body {
     color: #009dff;
 }
 
-#question1 {
+.question {
     background-color: white;
     padding: 20px;
     padding-left: 40px;
@@ -26,26 +26,19 @@ body {
     margin: 30px;
 }
 
-#question2 {
-    background-color: white;
-    padding: 20px;
-    padding-left: 40px;
-    border-radius: 20px;
-    margin: 30px;
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
 }
 
-#question3 {
+.button {
     background-color: white;
+    color: #009dff;
+    text-align: center;
+    width: 100px;
     padding: 20px;
-    padding-left: 40px;
-    border-radius: 20px;
-    margin: 30px;
-}
-
-#question4 {
-    background-color: white;
-    padding: 20px;
-    padding-left: 40px;
-    border-radius: 20px;
-    margin: 30px;
+    margin-bottom: 30px;
+    border-radius: 100px;
 }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="currency.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="window">
+        <div id="p1">Currency Converter</div>
+        <div id="p2">Try our free currency Converter</div>
+
+        <form action="">
+            <div class="input-field" id="from">
+                <label for="from">From: </label><br>
+                <select name="from" id="from">
+                    <option value="usd">United States Dollar</option>
+                    <option value="inr">Indian Rupee</option>
+                </select>
+            </div>
+    
+            <div class="input-field" id="to">
+                <label for="to">To: </label><br>
+                <select name="to" id="to">
+                    <option value="usd">United States Dollar</option>
+                    <option value="inr">Indian Rupee</option>
+                </select>
+            </div>
+    
+            <div class="input-field" id="amount">
+                <label for="amount">Amount: </label><br>
+                <input type="number" name="amount" id="amount">
+            </div>
+
+            <div class="button-container"><button>Convert</button></div>
+        </form>
+
+        <div id="output">1USD = 81.63INR</div>
+    </div>
+</body>
+</html>
