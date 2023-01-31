@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const between10and100 = (arr) => {
+            arr.every(element => element >= 10 && element <= 100);
+        }
+
+        const checkDatatype = (arr, type) => {
+            arr.every(element => typeof element === type);
+        }
+
+        const checkForMultipleof7 = (arr) => {
+            arr.every(element => element % 7 === 0);
+        }
+
+        const checkForContainArray = (arr) => {
+            arr.every(element => Array.isArray(element));
+        }
+
+        const aStudent = [
+            {sStudentId : "001" , fPercentage : 91.2},
+            {sStudentId : "002" , fPercentage : 78.7},
+	        {sStudentId : "003" , fPercentage : 62.9},
+	        {sStudentId : "004" , fPercentage : 81.4}
+        ];
+
+        const checkforStudentAbove74 = (arr) => {
+            arr.every(element => element.fPercentage > 74);
+        }
+
+        const returnNumericArray = (arr) => {
+            return(arr.filter(element => typeof element === "number"));
+        }
+
+        const arrayDegreeToRadians = (arr) => {
+            return(arr.map(element => element * Math.PI / 180));
+        }
+
+        const arrayDegreeToSineRatio = (arr) => {
+            return(arr.map(element => Math.sin(element)));
+        }
+
+        const returnSurname = (arr) => {
+            return(arr.map(element => element.split(" ")[0]));
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
