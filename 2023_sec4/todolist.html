@@ -1,0 +1,181 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <script src="https://kit.fontawesome.com/d4552c7c1c.js"></script>
+    <title>Todo List</title>
+    <style>
+      body {
+        background-color: #352f5b;
+        font-family: Helvetica, Arial;
+        margin: 0;
+      }
+      .container {
+        max-width: 400px;
+        color: white;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+      input {
+        display: block;
+        line-height: 1.5;
+        height: 38px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.4rem;
+        color: #fff;
+        font-size: 1rem;
+      }
+      header {
+        text-align: center;
+        margin: 1.5rem 0;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      .todosUL {
+        color: rgb(248, 249, 250);
+        line-height: 1.5;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .todosUL > li {
+        border-radius: 0.25rem;
+        background-color: #423a6f;
+        padding: 1rem 1.25rem;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        position: relative;
+        line-height: 18px;
+      }
+      .fa-trash-alt {
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        margin-right: 1.25rem;
+        display: inline-block;
+        width: 16px;
+        height: 18px;
+      }
+      .addTaskForm {
+        margin: 1.5rem 0;
+      }
+      label {
+        display: block;
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Todo List</h1>
+        <form class="searchForm">
+          <input type="text" name="search" placeholder="search todos" />
+        </form>
+      </header>
+
+      <ul class="todosUL">
+        <!-- <li>
+          <span>play mariokart</span>
+          <i class="fas fa-trash-alt"></i>
+        </li>
+        <li>
+          <span>defeat ganon in zelda</span>
+          <i class="fas fa-trash-alt"></i>
+        </li>
+        <li>
+          <span>make a veggie pie</span>
+          <i class="fas fa-trash-alt"></i>
+        </li> -->
+      </ul>
+
+      <form class="addTaskForm">
+        <label>Add a new todo...</label>
+        <input type="text" name="add" />
+      </form>
+    </div>
+
+    <script>
+      const addForm = document.querySelector(".addTaskForm"); //<form>
+      //const addForm = document.forms[1]
+      const lists = document.querySelector(".todosUL"); //<ul>
+      const searchText = document.querySelector(".searchForm input"); //<input name="search">
+
+      //function for adding a new todo list to <ul>
+      function addNewTodo(todo) {
+        const li = document.createElement("li");
+        const span = document.createElement("span");
+        span.textContent = todo;
+        li.appendChild(span);
+        const trash = document.createElement("i");
+        trash.classList.add("fas", "fa-trash-alt");
+        li.appendChild(trash);
+        document.querySelector("ul").appendChild(li);
+      }
+
+      //function for deleting a todo li
+      function deleteTodo(todo) {
+        todo.addEventListener("click", (e) => {
+          if (e.target.classList.contain("fa-trash-alt")) {
+            e.target.parentElement.remove();
+          }
+        });
+      }
+
+      //function to add or remove the "hide" class for <li> that "includes()"" the search word
+      function search(searchQuery) {
+        const todos = Array.from(lists.children);
+
+        todos
+          .filter((todo) => {
+            return !todo.textContent.toLowerCase().includes(searchQuery);
+          })
+          .forEach((todo) => {
+            todo.classList.add("hide");
+          });
+
+        todos
+          .filter((todo) => {
+            return todo.textContent.toLowerCase().includes(searchQuery);
+          })
+          .forEach((todo) => {
+            todo.classList.remove("hide");
+          });
+      }
+
+      //event: pressing return to submit form and add to list
+      addForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (addForm.add.value.trim().length > 0) {
+          addNewTodo(addForm.add.value.trim());
+        } else {
+          alert("Please enter something!");
+        }
+
+        //event: delete todos li
+        addForm.reset();
+        const trash = document.querySelectorAll(".fa-trash-alt");
+        for (let i = 0; i < trash.length; i++) {
+          trash[i].addEventListener("click", (e) => {
+            e.target.parentElement.remove();
+          });
+        }
+      });
+
+      //event: keyup event for the search input
+      searchText.addEventListener("keyup", () => {
+        search(searchText.value.trim().toLowerCase());
+      });
+    </script>
+  </body>
+</html>
