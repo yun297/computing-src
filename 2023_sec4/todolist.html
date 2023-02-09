@@ -161,9 +161,9 @@
         } else {
           alert("Please enter something!");
         }
+        addForm.reset();
 
         //event: delete todos li
-        addForm.reset();
         const trash = document.querySelectorAll(".fa-trash-alt");
         for (let i = 0; i < trash.length; i++) {
           trash[i].addEventListener("click", (e) => {
