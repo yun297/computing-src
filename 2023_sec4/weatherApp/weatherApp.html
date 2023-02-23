@@ -1,0 +1,215 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ninja Weather</title>
+    <style>
+      body {
+        background-color: #eeedec;
+        margin: 0;
+        letter-spacing: 0.2em;
+        font-size: 0.9em;
+        font-family: Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        color: #212529;
+      }
+      .container {
+        max-width: 400px;
+        padding: 0 15px;
+        margin: 3rem auto;
+        color: #6c757d;
+        text-align: center;
+      }
+      h1 {
+        margin: 1.5rem;
+        font-size: 2.5rem;
+        line-height: 1.2;
+      }
+      form {
+        margin: 1.5rem 0;
+      }
+      label {
+        display: inline-block;
+        margin-bottom: 0.5rem;
+      }
+      input {
+        padding: 1.5rem;
+        display: block;
+        width: 100%;
+        height: 15px;
+        color: #495057;
+        background-color: #fff;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        font-size: 1.2rem;
+      }
+      input:focus {
+        outline-width: 4px;
+      }
+      .d-none {
+        display: none;
+      }
+      .card {
+        position: relative;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+      }
+      .card img {
+        width: 100%;
+      }
+      .icon {
+        position: relative;
+        top: -50px;
+        border-radius: 50%;
+        width: 100px;
+        margin: 0 auto -50px;
+        background-color: #f8f9fa;
+      }
+      .details {
+        text-transform: uppercase;
+        color: #6c757d;
+        padding-bottom: 1.25rem;
+      }
+      .details div,
+      h5 {
+        font-size: 1rem;
+      }
+      .details span {
+        font-size: 3.5rem;
+        color: #6c757d;
+        font-weight: 200;
+        line-height: 1.2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather Ninja</h1>
+
+      <form class="change-location">
+        <label for="city">Enter a location for weather information</label>
+        <input type="text" name="city" />
+      </form>
+
+      <div class="card d-none">
+        <img src="https://via.placeholder.com/400x300" class="time" />
+        <!--
+		change the src to day.svg or night.svg. remove the d-none class
+          -->
+        <div class="icon">
+          <img />
+          <!-- set the img to n.svg where n is the WeatherIcon value-->
+        </div>
+        <div class="details">
+          <h5>City name</h5>
+          <!-- Show EnglishName -->
+          <div>Weather condition</div>
+          <!-- Show WeatherText -->
+          <div>
+            <span>temp</span>
+            <!-- show Temperature Metric Value -->
+            <span>&deg;C</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const key = "dM0FlO1PEOwHOnNd3tpNJGH7JxyspIfp"; //API key
+
+      // get city information
+      const getCity = async (city) => {
+        const base =
+          "http://dataservice.accuweather.com/locations/v1/cities/search";
+        const query = `?apikey=${key}&q=${city}`;
+
+        //return required city info i.e. Key & EnglishName
+        const answer = await fetch(base + query)
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            return {
+              location: data[0].EnglishName,
+              key: data[0].Key,
+            };
+          })
+          .catch((err) => {
+            console.log(err);
+            alert("Please enter a valid location!");
+          });
+        return answer;
+      };
+
+      // get weather information
+      const getWeather = async (id) => {
+        const base = `http://dataservice.accuweather.com/currentconditions/v1/${id}`;
+        const query = `?apikey=${key}`;
+        //return required weather data:WeatherText, WeatherIcon, IsDayTime, Temperature
+        const answer = fetch(base + query)
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => {
+            return {
+              weatherText: data[0].WeatherText,
+              weatherIcon: data[0].WeatherIcon,
+              isDayTime: data[0].IsDayTime,
+              temperatureValue: data[0].Temperature.Metric.Value,
+            };
+          })
+          .catch((err) => {
+            console.log(err);
+            alert("Please enter a valid location!");
+          });
+        return answer;
+      };
+
+      const updateCity = async (city) => {
+        // this is an async function that get data from both APIs and returns the data in a single javascript object
+        const GETCITY = await getCity(city);
+        const GETWEATHER = await getWeather(GETCITY.key);
+        return {
+          ...GETWEATHER,
+          ...GETCITY,
+        };
+      };
+
+      const updateUI = (data) => {
+        //this function will use data to update HTML elements
+        //html elements that needs data update.
+        const card = document.querySelector(".card");
+        const time = document.querySelector("img.time");
+        const icon = document.querySelector(".icon img");
+        const cityName = document.querySelector(".details h5");
+        const weatherCondition = document.querySelector(".details div");
+        const temperature = document.querySelector(".details span");
+
+        //use data to update html elements
+        time.src = data.isDayTime ? "day.svg" : "night.svg";
+        icon.src = `icons/${data.weatherIcon}.svg`;
+        cityName.textContent = data.location;
+        weatherCondition.textContent = data.weatherText;
+        temperature.textContent = data.temperatureValue;
+
+        //remove d-none class from card
+        card.classList.remove("d-none");
+      };
+
+      document.querySelector("form").addEventListener("submit", (e) => {
+        // prevent default action
+        e.preventDefault();
+
+        //get city value
+        const city = document.querySelector("input").value;
+        console.log(city);
+
+        //update UI with new city
+        updateCity(city).then((data) => updateUI(data));
+      });
+    </script>
+  </body>
+</html>
