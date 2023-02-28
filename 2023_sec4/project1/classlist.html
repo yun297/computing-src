@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>class list</title>
+    <style>
+      h1 {
+        color: red;
+      }
+      li {
+        padding-inline: 0.4em;
+        margin: 0 0 0.3em;
+      }
+      a {
+        text-decoration: none;
+        outline: 1px solid #999;
+        padding-inline: 0.5em;
+      }
+      label {
+        color: #900;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Class List <span></span></h1>
+    <form>
+      <label> class :</label>
+      <select name="class">
+        <option value="">Select class</option>
+        <option value="4I1">4I1</option>
+        <option value="4I2">4I2</option>
+        <option value="4A3">4A3</option>
+      </select>
+      <a href="classphotos.html">Class Photos</a>
+    </form>
+
+    <ol></ol>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const cls = (urlParams.get("class") || "").toUpperCase();
+      document.querySelector("a").href = `classphotos.html?class=${cls}`
+
+      const displayClassList = (cls, students) => {
+        if (cls && students.length) {
+          //write your javaScript to generate an <LI> for each entry in the students array
+
+          for (i = 0; i < students.length; i++) {
+            const li = document.createElement("li");
+            li.textContent = students[i].name;
+            document.querySelector("ol").appendChild(li);
+          }
+        }
+      };
+
+      fetch("sec4.json")
+        .then((resp) => resp.json())
+        .then((data) => {
+          // extract only pupils who in cls into an array "students"
+          const students = data.filter((student) => {
+            if (student.class === cls) {
+              return student;
+            }
+          });
+          displayClassList(cls, students);
+        });
+
+      //do form submission using the form submit() method
+      document.querySelector("select").addEventListener("change", (e) => {
+        e.preventDefault()
+        document.forms[0].submit();
+      });
+    </script>
+  </body>
+</html>

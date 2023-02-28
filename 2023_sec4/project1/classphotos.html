@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Class list</title>
+    <style>
+      body {
+        text-align: center;
+        height: 100vh;
+      }
+      h1 {
+        color: red;
+      }
+      a {
+        text-decoration: none;
+        outline: 1px solid #999;
+        padding-inline: 0.5em;
+      }
+      label {
+        color: #900;
+        font-weight: bold;
+      }
+      #container {
+        padding: 0;
+        list-style-type: none;
+        width: 900px;
+        margin: auto;
+      }
+      @media only screen and (max-width: 800px) {
+        #container {
+          width: 100%;
+        }
+      }
+      @media only screen and (min-width: 1280px) {
+        #container {
+          width: 900px;
+        }
+      }
+      #container li {
+        width: 160px;
+        height: 213px;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        background-color: #e9e6fb;
+        margin: 4px 5px;
+        box-sizing: border-box;
+      }
+      #container img {
+        height: 106%;
+        position: absolute;
+        top: -6%;
+        left: -3%;
+        aspect-ratio: 3 / 4;
+      }
+      #container li p {
+        font-size: 0.8em;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 0.2em;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: #00000033;
+        color: white;
+        text-align: center;
+        line-height: 1.2;
+      }
+      #container li span {
+        font-size: 0.6em;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+      #container li:hover {
+        cursor: pointer;
+        background-color: rgba(200, 210, 220, 0.3);
+        box-shadow: 2px 4px 6px #aaa;
+      }
+      .Aries,
+      .Leo,
+      .Sagittarius {
+        border-color: red;
+      }
+      .Pisces,
+      .Cancer,
+      .Scorpio {
+        border-color: #33f;
+      }
+      .Capricorn,
+      .Taurus,
+      .Virgo {
+        border-color: #090;
+      }
+      .Aquarius,
+      .Gemini,
+      .Libra {
+        border-color: #aaa;
+      }
+      .Leo,
+      .Scorpio,
+      .Libra,
+      .Taurus {
+        border-style: double;
+        border-width: 5px;
+      }
+      .Aries,
+      .Cancer,
+      .cCapricorn,
+      .Gemini {
+        border-style: solid;
+        border-width: 2px;
+      }
+      .Sagittarius,
+      .Aquarius,
+      .Pisces,
+      .Virgo {
+        border-style: dotted;
+        border-width: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Class Photos <span><!-- 4P1--></span>
+    </h1>
+    <form>
+      <label> class :</label>
+      <select name="class">
+        <option value="">Select class</option>
+        <option value="4I1">4I1</option>
+        <option value="4I2">4I2</option>
+        <option value="4A3">4A3</option>
+      </select>
+      <a href="classlist.html">Class List</a>
+    </form>
+    <ul id="container"></ul>
+    <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const cls = (urlParams.get("class") || "").toUpperCase();
+    
+
+    const displayClass = (cls, students) => {if (cls && students.length) {
+      //display a list of students photos & info
+      for(i = 0; i < students.length; i++){
+        const li = document.createElement("li");
+        const img = document.createElement("img");
+        img.setAttribute("src", students[i].photo);
+        li.appendChild(img)
+        const span = document.createElement("span")
+        span.textContent = students[i].class + students[i].sno
+        li.appendChild(span)
+        const p = document.createElement("p")
+        p.textContent = students[i].name
+        li.appendChild(p)
+        li.setAttribute("class", students[i].horoscope)
+        document.querySelector("ul").appendChild(li)
+        }
+      }
+    };
+    fetch("sec4.json")
+    .then((resp) => resp.json())
+    .then((data) => {
+      /* code what data the array "students" should contain before calling the displayClass function */
+      const students = data.filter((student) => {
+            if (student.class === cls) {
+              return student;
+            }
+          });
+
+      displayClass(cls, students);
+    });
+    
+    //write an event-listener to trigger form submission when user changes options
+    document.querySelector("select").addEventListener("change", (e) => {
+      e.preventDefault()
+      document.forms[0].submit();
+    });
+    </script>
+  </body>
+</html>
