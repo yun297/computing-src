@@ -9,20 +9,27 @@ def complete(s):
     else:
         return True
     
-def bubbleSort(s, i = 0):
+def foo101(s):
     s = list(s)
 
-    if i == len(s):
-        return "".join(s)
-    elif int(s[i-1]) > int(s[i]):
-        s[i], s[i-1] = s[i-1], s[i]
-    return bubbleSort(s, i + 1)
-
-def foo101(s):
+    for i in range(len(s.copy())):
+        if int(s[i-1]) < int(s[i]):
+            s[i], s[i-1] = s[i-1], s[i]
+        
+    print(s)    
+    
     if complete(s):
         return s
     else:
-        return foo101(bubbleSort(s))
+        return foo101(s)
+
+# def foo101(s):
+#     print(s)
+    
+#     if complete(s):
+#         return s
+#     else:
+#         return foo101(bubbleSort(s))
 
 print(foo101("11010010101"))
 print(foo101("0100"))
