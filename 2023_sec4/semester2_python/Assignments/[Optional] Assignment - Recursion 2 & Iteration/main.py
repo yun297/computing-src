@@ -34,6 +34,8 @@ def foo123(s, x = 0, y = 0, z = 0):
 
 # foo123("13233112331231332")
 
+# Question 3: fooABC
+
 def fooABC(s):
     check = 0
     for char in s:
@@ -54,16 +56,17 @@ def fooABC(s):
 
 print(fooABC("imhimhimhihihm"))
 
+# Question 4: deep_contains
+
 def deep_contains(obj, tup):
-    
-    if isinstance(obj, tuple):
-        for value in obj:
-            if value is tup:
-                return True
-            else:
-                return deep_contains(value, tup)
-        else:
-            return False
+    for item in tup:
+        if item is obj:
+            return True
+        elif deep_contains(obj, item):
+            print(item, obj)
+            return True
+    else:
+        return False
     
 # do not touch. needed for public test cases
 x = (1,2)
