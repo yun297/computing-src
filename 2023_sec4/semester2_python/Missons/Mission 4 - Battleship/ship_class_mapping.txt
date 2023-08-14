@@ -1,0 +1,8 @@
+Class, Abbreviation, Size
+Carrier, C, 5
+Battleship, B, 4
+Heavy Cruiser, H, 3
+Light Cruiser, L, 3
+Submarine, S, 3
+Destroyer, D, 2
+Torpedo Boat, T, 2
