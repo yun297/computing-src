@@ -45,8 +45,11 @@ class Plant(AC_Object):
             self._symbol = "¥"
             return None
 
-        # if self.get_o_type() == "tree":
+        if self.get_o_type() == "tree":
+            self._symbol = "Y"
+            return None
             
+# Task 1.2
 class Map:
     def __init__(self, max_row: int, max_col: int) -> None:
         self._map = [[None for i in range(max_col)] for j in range(max_row)]
@@ -54,21 +57,27 @@ class Map:
         self._max_col = max_col
         
     def add_new_obj(self, new_object: AC_Object, row: int, col: int):
-            if row >= self._max_row or col >= self._max_col:
-                print("Invalid position")
-                
-            elif self._map[row][col] != None:
-                print("Unable to add object. The position is occupied by {}".format(self._map[row][col]))
-                
-            elif new_object.get_o_type() == "tree":
-                # check if 3x3 area around the tree has anything
-                for i in range(row - 1, row + 2):
-                    for j in range(col - 1, col + 2):
-                        if self._map[i][j] != None:
-                            print("Unable to add object. The position is occupied by {}".format(self._map[i][j]))
-            else:
-                self._map[row][col] = new_object  # Store the object instance
-                new_object._coordinate = (row, col)  # Assign coordinate to the object
+        if row >= self._max_row or col >= self._max_col:
+            print("Invalid position")
+            
+        elif self._map[row][col] != None:
+            print("Unable to add object. The position is occupied by {}".format(self._map[row][col]))
+            
+        elif new_object.get_o_type() == "tree":
+            # Check if the specified position and its surroundings are empty
+            for i in range(row - 1, row + 2):
+                for j in range(col - 1, col + 2):
+                    if not (0 <= i < self._max_row and 0 <= j < self._max_col):
+                        continue  # Skip out-of-bounds positions
+                    if self._map[i][j] != None:
+                        print("Unable to add object. The position is occupied by {}".format(self._map[i][j]))
+                        return
+            # All positions are empty, so add the tree
+            self._map[row][col] = new_object
+            new_object._coordinate = (row, col)
+        else:
+            self._map[row][col] = new_object
+            new_object._coordinate = (row, col)
 
         
     def display(self) -> None:
@@ -95,12 +104,12 @@ class Map:
                                 row_coord, col_coord = col.get_coordinate()
                                 
                                 # add apple at the left, right and top of tree
-                                if row_coord - 1 >= 0:
-                                    self.add_new_obj(AC_Object("Apple", "o"), row_coord - 1, col_coord)
-                                if row_coord + 1 < self._max_row:
-                                    self.add_new_obj(AC_Object("Apple", "o"), row_coord + 1, col_coord)
+                                if col_coord + 1 >= 0:
+                                    self.add_new_obj(AC_Object("Apple", "@"), row_coord, col_coord + 1)
                                 if col_coord - 1 >= 0:
-                                    self.add_new_obj(AC_Object("Apple", "o"), row_coord, col_coord - 1)
+                                    self.add_new_obj(AC_Object("Apple", "@"), row_coord, col_coord - 1)
+                                if row_coord - 1 < self._max_row:
+                                    self.add_new_obj(AC_Object("Apple", "@"), row_coord - 1, col_coord)
                                                         
                             elif col.get_o_type() == "flower":
                                 # change symbol to ¥
