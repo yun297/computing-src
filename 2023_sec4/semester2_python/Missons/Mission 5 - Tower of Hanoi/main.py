@@ -16,7 +16,7 @@ class Tower():
     
 class TowerOfHanoi():
     def __init__(self, n: int) -> None:
-        self.__towers = {"A": Tower(), "B": Tower(), "C": Tower()}
+        self._towers = {"A": Tower(), "B": Tower(), "C": Tower()}
         self._n = n
         self._step = 1
     
