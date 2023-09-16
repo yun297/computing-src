@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Javascript
+        // <script>
+        // let str = '';
+
+        // data = [
+        //   { animal : 'dog' , name : 'Jack'},
+        //   { animal : 'cat' , name : 'Didi'}
+        // ]
+        //
+
+        // a) Using the array foreach method, update the variable str to :
+
+        // The name of the dog is Jack
+        // The name of the cat is Didi
+
+        // b) Assign the value of str to the same result using the array reduce method instead.
+
+        let str = '';
+
+        data = [
+        { animal: 'dog', name: 'Jack' },
+        { animal: 'cat', name: 'Didi' }
+        ];
+
+        // a) Using the array forEach method
+
+        data.forEach(element => {
+            str += `The name of the ${element.animal} is ${element.name}\n`
+        })
+
+        console.log(str)
+
+        // b) Assign the value of str to the same result using the array reduce method instead.
+
+        str = data.reduce((accumulator, currentVal) => {
+            return accumulator + `The name of the ${currentVal.animal} is ${currentVal.name}\n`
+        }, '')
+
+        console.log(str)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
