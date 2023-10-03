@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Seating Plan</title>
+</head>
+
+<body>
+    <h1>Seating Plan</h1>
+    <p>Seating Arrangement for Classgroup {{ cg_name }}:</p>
+    <table border="1px" width="100%">
+        {% for row in processed_data %}
+        <tr>
+            {% for tuple in row %}
+            <td>{{tuple}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

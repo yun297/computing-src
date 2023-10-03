@@ -39,11 +39,12 @@
 
         // b) Assign the value of str to the same result using the array reduce method instead.
 
-        str = data.reduce((accumulator, currentVal) => {
-            return accumulator + `The name of the ${currentVal.animal} is ${currentVal.name}\n`
+        data.reduce((accumulator, element) => {
+            return accumulator += `The name of the ${element.animal} is ${element.name}\n`
         }, '')
 
         console.log(str)
+
     </script>
 </head>
 <body>

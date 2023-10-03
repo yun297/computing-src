@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Get Class Group Name</title>
+</head>
+
+<body>
+    <h1>Get Class Group Name</h1>
+    <form action="{{url_for('gen_seating')}}" method="POST">
+        <p>
+            Please enter the class group name:
+        </p>
+        <p>
+            <input type="text" name="cg_name" value="Comp_4AB">
+        </p>
+        <p>
+            <input type="number" name="no_of_cols" value="5">
+        </p>
+        <p>
+            <input type="submit" value="Generate Seating Plan">
+        </p>
+    </form>
+</body>
+
+</html>

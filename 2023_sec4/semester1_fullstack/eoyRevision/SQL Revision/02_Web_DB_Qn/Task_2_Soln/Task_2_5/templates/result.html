@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Seating Plan</title>
+</head>
+
+<body>
+    <h1>Seating Plan</h1>
+    <p>Seating Arrangement for Classgroup {{ cg_name }}:</p>
+    <table>
+        {% for row in processed_data %}
+        <tr class="row_class_index">
+            {% for tuple in row %}
+            <td class="content_cell">{{tuple[0]}}</td>
+            <td></td>
+            {% endfor %}
+        </tr>
+        <tr class="row_name">
+            {% for tuple in row %}
+            <td class="content_cell">{{tuple[1]}}</td>
+            <td></td>
+            {% endfor %}
+        </tr>
+        <tr class="row_empty">
+            {% for tuple in row %}
+            <td> </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="fat" , id="nigga">click for BBC</button>
+    <div class="fat"></div>
+  </body>
+  <script>
+    // Q3
+
+    arr3 = [23, 45, 2, 10, 44, 45, 88];
+
+    result3 = arr3.reduce(
+      (acc, curr) => {
+        if (curr % 2 === 0) {
+          acc["even"] += 1;
+        } else {
+          acc["odd"] = +1;
+        }
+
+        return acc;
+      },
+      { even: 0, odd: 0 }
+    );
+
+    console.log(result3);
+
+    // Q4
+
+    arr4 = [
+      [34, 45, 12, 45],
+      [12, 6, 8, 62],
+      [11, 55, 37],
+    ];
+
+    result4 = arr4.filter((curr) => {
+      return curr.every((val) => {
+        if (curr[0] % 2 === 0) {
+          return val % 2 === 0;
+        } else {
+          return val % 2 === 1;
+        }
+      });
+    });
+
+    console.log(result4);
+
+    // Fetch
+
+    button = document.querySelector("#nigga");
+    div = document.querySelector("div");
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
+      fetch("test.json")
+        .then((resp) => {
+          return resp.json();
+        })
+        .then((data) => {
+          return data["students"];
+        })
+        .then((students) => {
+          students.forEach((peasant) => {
+            // let p = document.createElement("p");
+            // p.textContent = peasant["name"];
+            // div.appendChild(p);
+
+            const template = `<p>${peasant["name"]}</p>`;
+            div.innerHTML += template;
+          });
+        });
+    });
+  </script>
+</html>

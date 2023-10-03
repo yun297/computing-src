@@ -1,0 +1,17 @@
+table {
+    width: 60%;
+    text-align: center;
+}
+
+.row_empty {
+    height: 1cm;
+}
+
+.row_name {
+    height: 3rem;
+}
+
+.content_cell {
+    border: solid black 1px;
+    width: 10%;
+}

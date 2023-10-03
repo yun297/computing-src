@@ -1,0 +1,54 @@
+{
+    "students": [
+      {
+        "name": "John Smith",
+        "class": "Class A",
+        "registration_number": "001"
+      },
+      {
+        "name": "Alice Johnson",
+        "class": "Class B",
+        "registration_number": "002"
+      },
+      {
+        "name": "David Wilson",
+        "class": "Class A",
+        "registration_number": "003"
+      },
+      {
+        "name": "Sarah Brown",
+        "class": "Class C",
+        "registration_number": "004"
+      },
+      {
+        "name": "Emily Davis",
+        "class": "Class B",
+        "registration_number": "005"
+      },
+      {
+        "name": "Michael Lee",
+        "class": "Class C",
+        "registration_number": "006"
+      },
+      {
+        "name": "Sophia Martinez",
+        "class": "Class A",
+        "registration_number": "007"
+      },
+      {
+        "name": "Matthew Johnson",
+        "class": "Class B",
+        "registration_number": "008"
+      },
+      {
+        "name": "Olivia Brown",
+        "class": "Class A",
+        "registration_number": "009"
+      },
+      {
+        "name": "Daniel Garcia",
+        "class": "Class C",
+        "registration_number": "010"
+      }
+    ]
+  }

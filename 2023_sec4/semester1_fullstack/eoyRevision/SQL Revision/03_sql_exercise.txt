@@ -1,0 +1,26 @@
+1. Select student info: name, class, indexNo, gender from table student
+
+1.1 Select from Class "4A"
+1.2 ORDER By indexNo DESC
+
+2. Select students in class group Comp_4AB
+
+
+3. Insert a new record for student and SCR
+
+HS-2015-108, Xiao Ming, 4A, 15, M
+
+HS-2015-108, 5
+
+4. Update a record
+
+Chang Xiao Ming's class to 4B
+
+5. Delete a record
+
+Delete SCR record for Xiao Ming
+
+Then
+
+Delete Xiao Ming's record
+
