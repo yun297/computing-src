@@ -33,4 +33,4 @@ print(f"{x:>6}{y:>6}{z:>6}")
 
 # Question 5
 
-
+print(pow(8, 2))
