@@ -18,8 +18,8 @@ $data = array(
 );
 
 foreach ($data as $element) {
-  $str .= "The name of the {$element["animal"]} is {$element["name"]}"
-}
+  $str .= "The name of the {$element["animal"]} is {$element["name"]}<br>";
+};
 
-echo $str
+echo $str;
 ?>

@@ -1,0 +1,15 @@
+BEGIN
+
+    READ Income
+    READ Subsidies
+
+    TAX = 20% * (Income - 10000 - Subsidies * 2000)
+
+    IF Tax > 0
+        PRINT Tax
+    ELSE
+        Tax = 0
+        PRINT Tax
+    ENDIF
+
+END

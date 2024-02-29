@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>click for nudes</button>
+    <div></div>
+
+    <?php
+
+    $link = mysqli_connect("localhost", "root", "", "hci");
+    $query = "SELECT * FROM students WHERE class = '4A3'";
+
+    $result = mysqli_query($link, $query);
+
+    $arr = array()
+
+    while($row = mysqli_fetch_assoc($result)) {
+        $arr[] = $row;
+    }
+
+    ?>
+  </body>
+  <script>
+    // Q3 reduce
+
+    // let arr = [23, 45, 2, 10, 44, 45, 88]
+    // let result = arr.reduce((acc, value) => {
+    //     if (value%2 === 0) {
+    //         acc[0] += value;
+    //     } else {
+    //         acc[1] += value;
+    //     }
+
+    //     return acc
+    // }, [0, 0])
+
+    // Q4 filter
+
+    let arr = [
+      [34, 45, 12, 45],
+      [12, 6, 8, 62],
+      [11, 55, 37],
+    ];
+
+    // let result = arr.filter((value) => {
+    //     condition = true
+    //     value.forEach((num) => {
+    //         if (value[0] % 2 === 0) {
+    //             if (num%2 !== 0){
+    //                 condition = false
+    //             }
+    //         } else {
+    //             if (num%2 !== 1){
+    //                 condition = false
+    //             }
+    //         }
+    //     })
+
+    //     return condition
+    // })
+
+    // console.log(result);
+
+    // Q4 part 2
+
+    let result = arr.map((list) => {
+        return list.map((num) => {
+            if (num%2 === 1){
+                return num -= 1;
+            } else {
+                return num
+            }
+        })
+    })
+
+    console.log(result)
+  </script>
+</html>
