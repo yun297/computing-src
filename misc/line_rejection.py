@@ -12,4 +12,4 @@ if bearing < 180:
 elif bearing >= 180:
     move = bearing - 180
     
-print(f"Bearing: {bearing} | Move Angle: {move}")
+print(f"Bearing: {bearing} | Move Angle: {move}")   
