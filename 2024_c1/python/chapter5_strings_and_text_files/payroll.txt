@@ -1,0 +1,11 @@
+Tan 5 40
+Sim 6 20
+Lee 4 20
+Ng 7 50
+Ong 8 60
+Wong 5.5 45
+Goh 6.5 24
+Chua 7 60
+Chan 9 10
+Koh 12 5
+Lim 9.5 20
