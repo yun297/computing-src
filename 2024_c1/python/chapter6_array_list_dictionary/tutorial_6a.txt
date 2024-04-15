@@ -1,0 +1,133 @@
+Question 1
+
+BEGIN
+    DECLARE scores: ARRAY[39] of INTEGER
+    DECLARE sum: INTEGER
+    DECRARE count: INTEGER
+    DECLARE num: INTEGER
+    DECLARE average: FLOAT
+
+    count <- 0
+    sum <- 0
+    count <- 0
+
+    OUTPUT "Enter a score: (enter -1 to quit.)"
+    INPUT num
+
+    WHILE (count < 25) and (num <> -1)
+        count <- count + 1
+        scores[count] <- num
+        OUTPUT "Enter a score: (enter -1 to quit.)"
+        INPUT num
+    ENDWHILE
+
+    FOR i <- 1 TO count
+        sum <- sum + scores[i]
+    ENDFOR
+
+    average <- sum / count
+
+    OUTPUT "The average of the scores is: ", average
+END
+
+Question 2
+
+BEGIN
+    CONSTANT MAXSIZE = 5
+    DECLARE size: INTEGER
+    DECLARE name: STRING
+    DECLARE score: ARRAY[4] of INTEGER
+
+    size <- 0
+
+    DECLARE names: ARRAY[MAXSIZE] of STRING
+    DECLARE scores: ARRAY[MAXSIZE] of INTEGER
+
+    OUTPUT "Enter the name of the student: (enter "quit" to quit.)"
+    INPUT name
+
+    OUTPUT "Enter the score 1 of the student: "
+    score[1] <- INPUT
+    OUTPUT "Enter the score 2 of the student: "
+    score[2] <- INPUT
+    OUTPUT "Enter the score 3 of the student: "
+    score[3] <- INPUT
+    OUTPUT "Enter the score 4 of the student: "
+    score[4] <- INPUT
+
+    WHILE (name <> "quit") AND (size < MAXSIZE)
+        size <- size + 1
+        
+        names[size] <- name
+        scores[size] <- score
+
+        OUTPUT "Enter the name of the student: (enter "quit" to quit.)"
+        INPUT name
+
+        OUTPUT "Enter the score 1 of the student: "
+        score[1] <- INPUT
+        OUTPUT "Enter the score 2 of the student: "
+        score[2] <- INPUT
+        OUTPUT "Enter the score 3 of the student: "
+        score[3] <- INPUT
+        OUTPUT "Enter the score 4 of the student: "
+        score[4] <- INPUT
+        ENDWHILE
+
+    FOR i <- 1 TO size
+        OUTPUT "Name: ", names[i]
+        OUTPUT "Score 1: ", scores[i][1]
+        OUTPUT "Score 2: ", scores[i][2]
+        OUTPUT "Score 3: ", scores[i][3]
+        OUTPUT "Score 4: ", scores[i][4]
+    ENDFOR
+END
+
+Question 3
+
+Write a program, in pseudocode, to read the name and the closing prices of several stocks for each weekday of last week into two parallel arrays. For each stock, the program should print the maximum and minimum price and the day it was achieved.
+
+BEGIN
+    CONSTANT NUM_STOCKS = 5
+    CONSTANT NUM_DAYS = 5
+
+    DECLARE stocks: ARRAY[NUM_STOCKS] of STRING
+    DECLARE closing_prices: ARRAY[NUM_STOCKS, NUM_DAYS] of FLOAT
+    DECLARE max_prices: ARRAY[NUM_STOCKS] of FLOAT
+    DECLARE min_prices: ARRAY[NUM_STOCKS] of FLOAT
+    DECLARE max_days: ARRAY[NUM_STOCKS] of INTEGER
+    DECLARE min_days: ARRAY[NUM_STOCKS] of INTEGER
+
+    FOR i <- 1 TO NUM_STOCKS
+        OUTPUT "Enter the name of stock ", i, ": "
+        INPUT stocks[i]
+        
+        FOR j <- 1 TO NUM_DAYS
+            OUTPUT "Enter the closing price of ", stocks[i], " for day ", j, ": "
+            INPUT closing_prices[i, j]
+            
+            IF j = 1 THEN
+                max_prices[i] <- closing_prices[i, j]
+                min_prices[i] <- closing_prices[i, j]
+                max_days[i] <- j
+                min_days[i] <- j
+            ELSE
+                IF closing_prices[i, j] > max_prices[i] THEN
+                    max_prices[i] <- closing_prices[i, j]
+                    max_days[i] <- j
+                ENDIF
+                
+                IF closing_prices[i, j] < min_prices[i] THEN
+                    min_prices[i] <- closing_prices[i, j]
+                    min_days[i] <- j
+                ENDIF
+            ENDIF
+        ENDFOR
+    ENDFOR
+
+    FOR i <- 1 TO NUM_STOCKS
+        OUTPUT "For stock ", stocks[i], ":"
+        OUTPUT "Maximum price: ", max_prices[i], " achieved on day ", max_days[i]
+        OUTPUT "Minimum price: ", min_prices[i], " achieved on day ", min_days[i]
+    ENDFOR
+END
