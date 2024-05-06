@@ -8,10 +8,10 @@ for line in seuss:
         line = line.replace(i, " ")
         
     for word in line.split(" "):
-        if word not in wordlist and word != "":
-            wordlist[word] = 1
-        elif word != "":
-            wordlist[word] += 1
+        if word.lower() not in wordlist and word != "":
+            wordlist[word.lower()] = 1
+        elif word.lower() != "":
+            wordlist[word.lower()] += 1
 
 print(wordlist)
 
