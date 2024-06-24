@@ -40,3 +40,60 @@ class LinkedList:
     def push(self, data):
         new_node = Node(data, self.root) # new node that points to the root
         self.root = new_node # new node is now the new root
+    
+    def find(self, target):
+        ptr = self.root
+        while ptr != None:
+            if ptr.get_data == target:
+                return True # end immediately when found
+            
+            else: # not found YET
+                ptr = ptr.get_next()
+        
+        return False # return not found at the end of LL
+    
+    def remove(self, target):
+        curr = self.root
+        prev = None
+        while curr: # while None works the same way as while False, quits when condition, i.e curr, becomes None
+            if curr.get_data() == target:
+                if prev == None: # if there is no previous i.e root is being removed
+                    self.root = curr.get_next()
+                else:
+                    prev.set_next(curr.get_next()) # reset the next of the node before the target to the next node after the target
+                return
+            else: # not found yet
+                prev = curr
+                curr = curr.get_next()
+        
+    def remove2(self, target): # more compact way using peek which is curr.get_next().get_data()
+        curr = self.root
+        if curr.get_data() == target:
+            self.root = curr.get_next()
+            return
+        while curr.get_next(): # while None works the same way as while False, quits when condition, i.e curr.get_next(), becomes None
+            if curr.peek() == target: # next data = target
+                curr.set_next(curr.get_next().get_next())
+                return
+            else:
+                curr = curr.get_next()
+        
+        print(f"{target} not found, no node removed.")
+    
+    def display(self):
+        ptr = self.root # pointer starts at root
+        while ptr != None: # while the pointer is not at the last node that has no next yet
+            print(f"{ptr.get_data()}") # print the data of the node the pointer is at
+            ptr = ptr.get_next() # reset pointer to the next node
+        print("End of linked list")
+    
+my_list = LinkedList()
+my_list.push("Skibidi")
+my_list.push("Toilet")
+my_list.push("Gyat")
+my_list.push("Rizz")
+
+my_list.display()
+
+my_list.remove("Skibidi")
+my_list.display()
