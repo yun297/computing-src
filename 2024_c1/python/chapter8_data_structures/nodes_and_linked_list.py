@@ -36,10 +36,12 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.root = None
+        self.length = 0
         
     def push(self, data):
         new_node = Node(data, self.root) # new node that points to the root
         self.root = new_node # new node is now the new root
+        self.length += 1
     
     def find(self, target):
         ptr = self.root
@@ -52,15 +54,44 @@ class LinkedList:
         
         return False # return not found at the end of LL
     
+    def insert(self, data, position):
+        insert = Node(data)
+        if position == 1:
+            insert.set_next == self.root
+            self.root == insert
+            self.length += 1
+            
+        elif position > 1 and position <= self.length:  # Insert into the middle
+            current = self.root
+            count = 1
+            while count < position - 1:  # Traverse to the node before the insertion point
+                current = current.get_next()
+                count += 1
+            insert.set_next(current.get_next())  # Set the new node's next to current node's next
+            current.set_next(insert)  # Set current node's next to the new node
+            self.length += 1
+        
+        else:  # Append to the last position
+            current = self.root
+            while current.get_next() is not None:  # Traverse to the last node
+                current = current.get_next()
+            current.set_next(insert)  # Set the new node as the next of the last node
+            self.length += 1  
+            
+            
+    
     def remove(self, target):
         curr = self.root
         prev = None
+        self.length -= 1
         while curr: # while None works the same way as while False, quits when condition, i.e curr, becomes None
             if curr.get_data() == target:
                 if prev == None: # if there is no previous i.e root is being removed
                     self.root = curr.get_next()
+                    self.length -= 1
                 else:
                     prev.set_next(curr.get_next()) # reset the next of the node before the target to the next node after the target
+                    self.length -= 1
                 return
             else: # not found yet
                 prev = curr
@@ -70,10 +101,12 @@ class LinkedList:
         curr = self.root
         if curr.get_data() == target:
             self.root = curr.get_next()
+            self.length -= 1
             return
         while curr.get_next(): # while None works the same way as while False, quits when condition, i.e curr.get_next(), becomes None
             if curr.peek() == target: # next data = target
                 curr.set_next(curr.get_next().get_next())
+                self.length -= 1
                 return
             else:
                 curr = curr.get_next()
