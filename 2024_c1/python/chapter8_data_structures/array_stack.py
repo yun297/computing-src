@@ -39,15 +39,15 @@ class ArrayStack:
             print("Stack is full.")
             return
         else:
-            self.top += 1
-            self.data[self.top] = data
+            self.top += 1 # add 1 to top shifts the top pointer down in the list
+            self.data[self.top] = data # set the next element to data
             return
 
     def pop(self):
         if self.top == -1:
             return "Stack is empty."
         else:
-            ret = self.data[self.top]
+            ret = self.data[self.top] # shift the pointer up, but element doesn't have to be removed in the context of an ArrayStack
             self.top -= 1
             return ret
 
