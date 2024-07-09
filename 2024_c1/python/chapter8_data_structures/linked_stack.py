@@ -47,6 +47,8 @@ class LinkedStack:
             ptr = ptr.get_next() # reset pointer to the next node
         print("End of linked list")
     
+# example 
+    
 jenga = LinkedStack()
 
 for char in "ABCDE":
