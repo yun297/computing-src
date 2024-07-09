@@ -40,6 +40,13 @@ class LinkedStack:
     def len(self):
         return self.length
     
+    def display(self):
+        ptr = self.root # pointer starts at root
+        while ptr != None: # while the pointer is not at the last node that has no next yet
+            print(f"{ptr.get_data()}") # print the data of the node the pointer is at
+            ptr = ptr.get_next() # reset pointer to the next node
+        print("End of linked list")
+    
 jenga = LinkedStack()
 
 for char in "ABCDE":
