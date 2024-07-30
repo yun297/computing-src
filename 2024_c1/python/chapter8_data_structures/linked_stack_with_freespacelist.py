@@ -19,7 +19,7 @@ class Node:
     def get_next(self): # get_next_node()
         return self.next
     
-class List:
+class LinkedList:
     def __init__(self):
         self.root = None
         self.length = 0
@@ -90,8 +90,8 @@ class List:
                 
 class Game:
     def __init__(self):
-        self.free = List() # free is empty
-        self.players = List() # players is empty
+        self.free = LinkedList() # free is empty
+        self.players = LinkedList() # players is empty
         
         for i in range(5):
             self.free.push(f'empty space {i}')
