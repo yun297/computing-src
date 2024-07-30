@@ -77,8 +77,6 @@ class LinkedList:
                 current = current.get_next()
             current.set_next(insert)  # Set the new node as the next of the last node
             self.length += 1  
-            
-            
     
     def remove(self, target):
         curr = self.root
