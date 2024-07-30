@@ -1,0 +1,63 @@
+Insert(self, Position : INTEGER, Data: NODE)
+    IF Position > self.Length THEN
+        OUTPUT "Position out of range!"
+        RETURN
+
+    ELSE IF Postion = 0 THEN
+        Data.SetNext(self.Root) // set the next pointer of` the node being inserted to the root of the linked list
+        self.Root <- Data
+
+    ELSE
+        DECLARE Pointer : NODE // node class
+        DECLARE Count : INTEGER
+
+        Count <- 0
+
+        Pointer <- self.Root
+
+        WHILE Pointer.GetNext() <> NONE
+            IF Count = Position THEN
+                Data.SetNext(Pointer.GetNext())
+                Pointer.SetNext(Data)
+                RETURN
+
+            ELSE
+                Count <- Count + 1
+                Pointer <- Pointer.GetNext() // shift pointer
+
+            ENDIF
+        ENDWHILE
+    ENDIF
+EndOfInsert
+
+Delete(self, Target: NODE)
+    IF self.Root = NONE THEN
+        OUTPUT "Linked List is empty, no nodes deleted!"
+    
+    ELSE IF Target = self.Root
+        self.Root <- self.Root.GetNext()
+        return Target
+    
+    ELSE
+        DECLARE Pointer : NODE // node class
+        
+        Pointer <- self.Root
+
+        WHILE Pointer.GetNext() <> NONE
+            IF Pointer.GetNext() = Target THEN
+                Pointer.SetNext(Pointer.GetNext().GetNext())
+                RETURN Target
+
+            ELSE
+                Pointer <- Pointer.GetNext()
+
+            ENDIF
+        ENDWHILE
+
+        OUTPUT "Node not found, no node deleted!"
+        RETURN
+
+    ENDIF
+EndOfDelete
+
+
