@@ -1,4 +1,4 @@
-Insert(self, Position : INTEGER, Data: NODE)
+FUNCTION Insert(self, Position : INTEGER, Data: NODE) RETURNS NONE
     IF Position > self.Length THEN
         OUTPUT "Position out of range!"
         RETURN
@@ -28,9 +28,9 @@ Insert(self, Position : INTEGER, Data: NODE)
             ENDIF
         ENDWHILE
     ENDIF
-EndOfInsert
+ENDFUNCTION
 
-Delete(self, Target: NODE)
+FUNCTION Delete(self, Target: NODE) RETURNS NODE
     IF self.Root = NONE THEN
         OUTPUT "Linked List is empty, no nodes deleted!"
     
@@ -58,6 +58,4 @@ Delete(self, Target: NODE)
         RETURN
 
     ENDIF
-EndOfDelete
-
-
+ENDFUNCTION
