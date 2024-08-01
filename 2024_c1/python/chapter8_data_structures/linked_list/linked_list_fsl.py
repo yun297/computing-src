@@ -13,8 +13,7 @@ class LinkedList:
 
     def insert(self, data: Node, position):
         if position == 0:
-            data.next = self.root
-            self.root = data
+            self.push(data)
         else:
             count = 0
             ptr = self.root
@@ -59,4 +58,4 @@ class Game:
         self.data.insert(self.free.delete(), position)
         
     def leave_party(self, target):
-        self.free.insert(self.data.delete(target), 0)
+        self.free.push(self.data.delete(target))
