@@ -21,14 +21,15 @@ class BSTree:
             return
         
         # travesal
+        inserted = False
         ptr = self.root
 
-        while ptr: # as long as pointer has not reached the end of a branch, equivalent to "while True"
+        while not inserted: # while inserted is False, while loop will continue to run
             if new_data > ptr.data: # belongs to right side subtree
 
                 if ptr.right is None: # if right side is empty
                     ptr.right = new_node # insert as right child
-                    return
+                    inserted = True # stops the while loop
                 else:
                     ptr = ptr.right # shift pointer to the right child
             
@@ -36,6 +37,6 @@ class BSTree:
 
                 if ptr.left is None:
                     ptr.left = new_node
-                    return
+                    inserted = True
                 else:
                     ptr = ptr.left # shift pointer to the left child
