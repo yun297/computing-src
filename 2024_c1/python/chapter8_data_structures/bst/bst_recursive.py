@@ -48,8 +48,20 @@ class BSTree:
             self.postorder(root.left)
             self.postorder(root.right)
             print(root.data)
-        
 
+    def search(self, root, target):
+        if not root:
+            return False
+        
+        elif root.data == target:
+            return True
+        
+        elif target < root.data:
+            return self.search(root.left, target)
+
+        else:
+            return self.search(root.right, target)
+        
 
 apple_tree = BSTree()
 apple_tree.insert(apple_tree.root, 12)
@@ -60,6 +72,8 @@ apple_tree.insert(apple_tree.root, 10)
 apple_tree.insert(apple_tree.root, 15)
 apple_tree.insert(apple_tree.root, 16)
 apple_tree.insert(apple_tree.root, 20)
+
+print(apple_tree.search(apple_tree.root, 21))
 
 apple_tree.inorder(apple_tree.root)
 print()
