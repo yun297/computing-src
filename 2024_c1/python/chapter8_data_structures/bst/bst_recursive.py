@@ -56,7 +56,7 @@ class BSTree:
         elif root.data is None:
             return False # end of tree reached
         
-        elif root.data == target:
+        elif root.data == target: # target found
             return True
 
         elif target < root.data: # target smaller, search left subtree
