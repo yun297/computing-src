@@ -51,15 +51,18 @@ class BSTree:
 
     def search(self, root, target):
         if not root: # check if tree is empty
-            return False  
+            return False
+        
+        elif root.data is None:
+            return False # end of tree reached
         
         elif root.data == target:
             return True
-        
-        elif target < root.data:
+
+        elif target < root.data: # target smaller, search left subtree
             return self.search(root.left, target)
 
-        else:
+        else: # target larger, search right subtree
             return self.search(root.right, target)
             
 
