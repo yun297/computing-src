@@ -50,8 +50,8 @@ class BSTree:
             print(root.data)
 
     def search(self, root, target):
-        if not root:
-            return False
+        if not root: # check if tree is empty
+            return False  
         
         elif root.data == target:
             return True
@@ -61,7 +61,7 @@ class BSTree:
 
         else:
             return self.search(root.right, target)
-        
+            
 
 apple_tree = BSTree()
 apple_tree.insert(apple_tree.root, 12)
