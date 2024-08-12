@@ -40,3 +40,18 @@ class BSTree:
                     inserted = True
                 else:
                     ptr = ptr.left # shift pointer to the left child
+    
+    def search(self, target):
+        ptr = self.root
+        while ptr: # while ptr is not None
+            if ptr.data == target: # target found
+                return True
+            
+            elif ptr.data is None: # reached the end of the tree
+                return False
+            
+            elif ptr.data < target: # search towards left subtree
+                ptr = ptr.left
+                
+            else: # search towards the right subtree
+                ptr = ptr.right
