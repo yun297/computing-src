@@ -73,16 +73,42 @@ class BSTree:
             if parent is None: # no parent
                 self.root = successor
                 
-            if current == parent.left: # current child is left child relative to parent
+            elif current == parent.left: # current child is left child relative to parent
                 parent.left == successor    
                 
-            elif current == parent.right: # current child is right child relative to parentn
+            elif current == parent.right: # current child is right child relative to parent
                 parent.right == successor
-            
                 
-        
-        # delete current
-        # connect parent to successor
+        else: # case 3: current has 2 children
+            # find the successor
+            
+            successor = current.left # we want LARGEST in the LEFT subtree (we want largest possible node in the subtree that is smaller than the target)
+            successor_parent = current # connecting successor's parent to successor child (if any), so that the successor can be promoted
+            
+            while successor.right: # successor has a right subtree/node (we want the largest in the subtree so we traverse right)
+                successor_parent = successor
+                successor = successor.right # traverse to the right
+                
+            # connect successor's parent to successor's child
+            # we don't have check if the child is right child because we know we have traversed to the right
+            
+            if successor_parent != current:
+                successor_parent.right = successor.left
+                successor.left = current.left # successor node get promoted
+                successor.right = current.right
+                
+            # if successor has no right child but only left child, no need to redefine the left child        
+            successor.right = current.right # so in both cases we will redefine the right child
+            
+            # connect parent to successor
+            if parent is None:
+                self.root = successor
+                
+            elif current == parent.left: # current child is left child relative to parent
+                parent.left == successor    
+                
+            elif current == parent.right: # current child is right child relative to parent
+                parent.right == successor
 
     def inorder(self, root): # in numerical order
         if root:
