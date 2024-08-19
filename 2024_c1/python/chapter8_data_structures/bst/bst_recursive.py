@@ -30,6 +30,23 @@ class BSTree:
                 root.right = TreeNode(item)
 
         return # returns None
+    
+    def finder(self, current, target, parent): # current takes in self.root from delete function
+        
+        if current.data == target:
+            return current, None # if root is target, then it has no parent
+        
+        elif target < current.data:
+            return self.finder(current.left, target, current) # current shifts down to the left, current becomes the new parent
+        
+        else:
+            return self.finder(current.right, target, current) #  current shifts down to the right, current becomes the new parent
+            
+    
+    def delete(self, target):
+        current, parent = self.finder(self.root, target)
+        # delete current
+        # connect parent to successor
 
     def inorder(self, root): # in numerical order
         if root:
