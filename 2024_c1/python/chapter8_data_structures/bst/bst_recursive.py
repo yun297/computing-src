@@ -46,7 +46,41 @@ class BSTree:
             
     
     def delete(self, target):
-        current, parent = self.finder(self.root, target)
+        current, parent = self.finder(self.root, target, None) # find the delete target and its parent using finder() helper function first
+        
+        if (current.left is None) and (current.right is None): # case 1: current has no child (i.e. leaf node)
+            if parent is None: # one singular node
+                self.root = None # entire tree is empty
+                
+            elif current == parent.left: # current child is left child relative to parent
+                parent.left == None
+                
+            elif current == parent.right: # current child is right child relative to parentn
+                parent.right == None
+                
+        elif (current.left is None) or (current.right is None): # case 2: current has 1 child 
+            # if both child is None, technically this if statement is still true, but the above if statement already handles the case of both child being None
+            
+            # find the successor
+            if current.left: # current has a left child (no right child because it has 1 child)
+                successor = current.left
+                
+            else: # current has a right chiild
+                successor = current.right
+            
+            
+            # determine if successor is a left child or right child
+            if parent is None: # no parent
+                self.root = successor
+                
+            if current == parent.left: # current child is left child relative to parent
+                parent.left == successor    
+                
+            elif current == parent.right: # current child is right child relative to parentn
+                parent.right == successor
+            
+                
+        
         # delete current
         # connect parent to successor
 
