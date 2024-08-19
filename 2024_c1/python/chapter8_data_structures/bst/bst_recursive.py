@@ -97,7 +97,10 @@ class BSTree:
                 successor.left = current.left # successor node get promoted
                 successor.right = current.right
                 
-            # if successor has no right child but only left child, no need to redefine the left child        
+            # if successor has no right child but only left child, no need to redefine the left child
+            # successor_parent == current when successor is already the biggest number in the left subtree of current
+            # i.e. no travesal was completed at all
+               
             successor.right = current.right # so in both cases we will redefine the right child
             
             # connect parent to successor
