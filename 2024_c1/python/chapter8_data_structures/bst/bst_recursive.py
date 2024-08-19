@@ -32,8 +32,10 @@ class BSTree:
         return # returns None
     
     def finder(self, current, target, parent): # current takes in self.root from delete function
+        if current is None:
+            return None, None # tree is empty
         
-        if current.data == target:
+        elif current.data == target:
             return current, None # if root is target, then it has no parent
         
         elif target < current.data:
