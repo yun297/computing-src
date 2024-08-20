@@ -130,6 +130,15 @@ class BSTree:
             self.postorder(root.left)
             self.postorder(root.right)
             print(root.data)
+            
+    def count(self, current): # returns number of nodes in a tree
+        if current is None: # tree is empty
+            return 0
+        
+        else: # tree is not empty
+            left_size = self.count(current.left) # split left subtree again into left and right (recusive)
+            right_size = self.coutn(current.right) # split right subtree again into left and right (recursive)
+            return left_size + right_size + 1 # + 1 comes from the root of the tree
 
     def search(self, root, target):
         if not root: # check if tree is empty
@@ -146,7 +155,7 @@ class BSTree:
 
         else: # target larger, search right subtree
             return self.search(root.right, target)
-            
+        
 
 apple_tree = BSTree()
 apple_tree.insert(apple_tree.root, 12)
