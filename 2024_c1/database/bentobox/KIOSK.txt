@@ -1,0 +1,4 @@
+1,Woodlands,3.7
+2,Bedok,3.8
+3,Boon Lay,3.5
+4,Telok Ayer,4.1
