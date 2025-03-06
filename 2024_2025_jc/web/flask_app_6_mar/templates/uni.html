@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University Ranking</title>
+  </head>
+  <body>
+    <h1>University Rank</h1>
+    <table border="">
+      <tr>
+        {% for item in uni_list[0] %}
+        <th>{{ item }}</th>
+        {% endfor %}
+      </tr>
+
+      {% for row in uni_list[1:] %}
+      <tr>
+        {% for item in row %}
+        <td>{{ item }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+      
+    </table>
+  </body>
+</html>
