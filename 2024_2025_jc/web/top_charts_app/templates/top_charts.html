@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Movies</title>
+	<head>
+	<body>
+		<table border>
+			<tr>
+				{% for header in top_charts_list[0] %}
+				<th>{{ header }}</th>
+				{% endfor %}
+			</tr>
+			{% for row in top_charts_list[1:] %}
+			<tr>
+				{% for item in row %}
+				<td>{{ item }}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+<html/>
