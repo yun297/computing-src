@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Genre Form</title>
+	</head>
+	<body>
+		<p>
+			<a href="/">back</a>
+		</p>
+		
+		<p>
+			<form>
+				<select name="choice">
+				
+				{% for genre in genres %}
+				<option value={{ genre }}>{{ genre }}</option>
+				{% endfor %}
+				
+				<input type="submit"/>
+			</form>
+		</p>
+</html>

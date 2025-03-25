@@ -1,0 +1,14 @@
+html {
+  font-family: "Inter";
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 96px;
+  margin: 0;
+}

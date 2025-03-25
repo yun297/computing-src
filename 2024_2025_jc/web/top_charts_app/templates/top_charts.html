@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Movies</title>
-	<head>
-	<body>
-		<table border>
-			<tr>
-				{% for header in top_charts_list[0] %}
-				<th>{{ header }}</th>
-				{% endfor %}
-			</tr>
-			{% for row in top_charts_list[1:] %}
-			<tr>
-				{% for item in row %}
-				<td>{{ item }}</td>
-				{% endfor %}
-			</tr>
-			{% endfor %}
-		</table>
-	</body>
-<html/>
+    <head>
+        <title>Movies</title>
+        <!-- <link rel= "stylesheet" href= "{{ url_for('static',filename='index.css') }}"> -->
+        <head>
+            <body>
+                <p><a href="/">Back to home</a></p>
+				
+				<form method="POST", action="/top_charts">
+					<input type="text" name="energy" placeholder="enter a minimum energy level"/>
+					<button type="submit">Filter</button>
+				</form>
+				
+                <table border>
+                    <tr>
+                        {% for header in top_charts_list[0] %}
+                        <th>{{ header }}</th>
+                        {% endfor %}
+                    </tr>
+                    {% for row in top_charts_list[1:] %}
+                    <tr>
+                        {% for item in row %}
+                        <td>{{ item }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </table>
+            </body>
+            <html />
+        </head>
+    </head>
+</html>
