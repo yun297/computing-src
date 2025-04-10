@@ -2,5 +2,9 @@
   {
     "type": "sqlite",
     "path": "c:\\Users\\zhuyu\\computing\\2024_c1\\database\\bentobox\\bento_company.db"
+  },
+  {
+    "type": "sqlite",
+    "path": "c:\\Users\\zhuyu\\computing-src\\2024_2025_jc\\database\\sqlite_task\\Northwind_small.sqlite"
   }
 ]
