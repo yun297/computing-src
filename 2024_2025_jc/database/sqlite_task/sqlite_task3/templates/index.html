@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SQLite Task 3</title>
+</head>
+<body>
+	<form action="/" method="POST">
+		<label for="dropdown">Choose an option:</label>
+		<select id="dropdown" name="region">
+			<option value="Northern">Northern</option>
+			<option value="Southern">Southern</option>
+			<option value="Eastern">Eastern</option>
+			<option value="Western">Western</option>
+		</select>
+
+		<br><br>
+		<button type="submit">Submit</button>
+	</form>
+
+	{% if selected_region %}
+		<p>You selected: <strong>{{ selected_region.capitalize() }}</strong></p>
+		
+		<table border>
+			<tr>
+				<th>FirstName</th>
+				<th>LastName</th>
+				<th>Birthday</th>
+				<th>Territory</th>
+				<th>Region</th>
+			</tr>
+			
+			{% for row in data %}
+			<tr>
+				{% for column in row %}
+					<td>{{ column }}</td>
+				{% endfor %}
+			</tr>	
+			{% endfor %}
+		</table>
+	{% endif %}
+</body>
+</html>
