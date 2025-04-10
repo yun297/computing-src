@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register New Employee</title>
+</head>
+<body>
+	<h2>Register New Employee</h2>
+	<form action="/add_employee" method="POST">
+		<label for="first_name">First Name:</label>
+		<input type="text" name="first_name" required><br><br>
+
+		<label for="last_name">Last Name:</label>
+		<input type="text" name="last_name" required><br><br>
+
+		<label for="birth_date">Birth Date (YYYY-MM-DD):</label>
+		<input type="text" name="birth_date" required><br><br>
+
+		<label for="territory">Territory:</label>
+		<select name="territory" required>
+			{% for id, description in territories %}
+				<option value="{{ id }}">{{ description }}</option>
+			{% endfor %}
+		</select><br><br>
+
+		<button type="submit">Add Employee</button>
+	</form>
+
+	<br>
+	<a href="/">Back to Home</a>
+</body>
+</html>
