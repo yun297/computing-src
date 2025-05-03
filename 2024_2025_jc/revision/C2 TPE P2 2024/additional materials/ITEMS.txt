@@ -1,0 +1,14 @@
+ArticleNo,Name
+3800020456293,Kit kat chunky
+8997240600041,Oatmilk
+8888002076009,Coca Cola Classic
+8851019010007,Pocky Chocolate Flavour
+8801073210776,Hot Chicken Flavour Cup Ramen
+8888196173324,Green Tea Jasmine
+0051000025494,Prego Traditional
+8992760211036,Ritz Crackers Box
+8888440000048,Cowhead Pure milk
+6922877700224,Creamy Peanut Butter
+8886467100062,Pringles Salt & Seaweed
+8888470010208,Meji Fresh Milk
+8888010202278,Original Cream Cheese Spread

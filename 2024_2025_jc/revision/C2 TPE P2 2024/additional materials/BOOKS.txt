@@ -1,0 +1,45 @@
+Python Prowess: Mastering Data Science and AI,Blue Zone Shelf 20
+Fluent Python: Unraveling the Code,Blue Zone Shelf 20
+Effective Pythonic Patterns,Yellow Zone Shelf 20
+Real Python Real World: Practical Applications,Blue Zone Shelf 20
+Flask Fundamentals: Building Lightweight Web Apps,Yellow Zone Shelf 20
+Geospatial Python: Mapping the World with Code,Blue Zone Shelf 20
+Python Poetry: Crafting Elegant Code,Yellow Zone Shelf 22
+C++ Conundrums: Mastering Modern Programming,Yellow Zone Shelf 19
+The C++ Chronicles: A Year of Coding Challenges,Yellow Zone Shelf 18
+C++ Crossroads: Navigating the Programming Landscape,Yellow Zone Shelf 18
+Modern C++ Mastery: Techniques and Tips,Green Zone Shelf 21
+C++20 Unleashed: Exploring the Latest Standards,Yellow Zone Shelf 19
+Parallel Programming in C++: Harnessing Multi-Core Power,Green Zone Shelf 21
+Advanced C++ Techniques: Beyond the Basics,Yellow Zone Shelf 18
+C++ for Game Developers: Real-world Strategies,Yellow Zone Shelf 19
+C++ Crash Course: Rapid Learning for 2020,Yellow Zone Shelf 18
+C# Chronicles: Mastering the Language in 2020,Yellow Zone Shelf 14
+Effective C# Practices: Modern Programming Wisdom,Yellow Zone Shelf 14
+C# Design Patterns: Architecting Robust Solutions,Blue Zone Shelf 12
+The C# Connoisseur: Exploring Advanced Techniques,Yellow Zone Shelf 14
+C# in Depth: Unraveling the Language Features,Blue Zone Shelf 12
+Asynchronous C#: Harnessing the Power of Async Programming,Yellow Zone Shelf 14
+C# Game Development: From Concept to Code,Blue Zone Shelf 12
+C# Essentials: A Comprehensive Guide for 2020,Yellow Zone Shelf 14
+C# 9 Unleashed: Embracing the Latest Features,Blue Zone Shelf 12
+Go Gurus: Mastering the Language in 2020,Yellow Zone Shelf 8
+Effective Go: Best Practices for Modern Development,Blue Zone Shelf 9
+The Go Handbook: A Comprehensive Guide for 2020,Yellow Zone Shelf 8
+Concurrency in Go: Unlocking Parallel Processing,Blue Zone Shelf 9
+Go in Depth: Unraveling the Language Features,Yellow Zone Shelf 8
+Web Development with Go: Building Scalable Applications,Blue Zone Shelf 9
+Go for Cloud Computing: Deploying Applications in the Cloud,Yellow Zone Shelf 8
+Go Networking Mastery: Building Distributed Systems,Yellow Zone Shelf 8
+Go 2 Unleashed: Embracing the Latest Features,Blue Zone Shelf 9
+Go Game Development: From Concept to Code,Yellow Zone Shelf 8
+Dart Dazzle: Mastering the Language in 2020,Blue Zone Shelf 5
+Effective Dart: Best Practices for Modern Development,Blue Zone Shelf 5
+The Dart Handbook: A Comprehensive Guide for 2020,Blue Zone Shelf 5
+Asynchronous Dart: Harnessing the Power of Concurrent Programming,Blue Zone Shelf 5
+Dart in Depth: Unraveling the Language Features,Blue Zone Shelf 5
+Web Development with Dart: Building Scalable Applications,Blue Zone Shelf 5
+Dart Essentials: A Practical Guide for 2020,Blue Zone Shelf 5
+Dart for Mobile Development: Creating Cross-Platform Apps,Blue Zone Shelf 5
+Dart Networking Mastery: Building Distributed Systems,Blue Zone Shelf 5
+Dart 2 Unleashed: Embracing the Latest Features,Blue Zone Shelf 5
