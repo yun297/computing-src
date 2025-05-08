@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TASK4_3_Zhu_Yunsong_24S6B.html</title>
+	</head>
+	
+	<body>
+		<table border>
+			<tr>
+				<th>Gender</th>
+				<th>Total Number</th>
+				<th>Average Weight</th>
+				<th>Average Height</th>
+			</tr>
+			
+			{% for row in health_stats %}
+			<tr>
+				{% for column in row %}
+				<td>{{ column }}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
