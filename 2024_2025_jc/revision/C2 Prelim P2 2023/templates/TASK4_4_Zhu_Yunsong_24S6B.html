@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>TASK4_4_Zhu_Yunsong_24S6B.html</title>
+	</head>
+	
+	<body>
+		<form action="/" method="POST">
+			<label for="date">Enter a date:</label>
+			<input type="date" id="date" name="date"></input>
+			
+			<button type="submit">Search by date selected</button>
+		</form>
+		
+		<table border>
+			<tr>
+				<th>DonutName</th>
+				<th>TotalQuantity</th>
+			</tr>
+			
+			{% for donut in donuts %}
+			<tr>
+				<td>{{ donut[0] }}</td>
+				<td>{{ donut[1] }}</td>
+			</tr>
+			{% endfor %}
+			
+		</table>
+	</body>
+</html>
