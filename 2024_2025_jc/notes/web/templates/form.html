@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+	<head><title>Form.html</title></head>
+	
+	<body>
+		<h1>Form</h1>
+		
+		<form action="/form" method="POST">
+			<label for="customer-name">Customer Name</label>
+			<select name="customer-name" id="customer-name">
+				<option value="Ali">Ali</option>
+				<option value="Ben">Ben</option>
+				<option value="Chloe">Chloe</option>
+			</select>
+			<br><br>
+			<label for="product-name">Product Name</label>
+			<select name="product-name" id="product-name">
+				<option value="Pen">Pen</option>
+				<option value="Book">Book</option>
+				<option value="Bag">Bag</option>
+			</select>
+			<br><br>
+			<button type="submit">Submit</button>
+		</form>
+		
+		<table>
+			<tr>
+				<th>Customer Name</th>
+				<th>Product Name</th>
+				<th>Quantity</th>
+			</tr>
+			{% for row in data %}
+			<tr>
+				{% for col in row %}
+				<td>{{ col }}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
