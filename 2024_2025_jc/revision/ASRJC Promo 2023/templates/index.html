@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Task 4 index.html</title>
+	</head>
+	
+	<body>
+		<form method="POST">
+			<!-- Text input for m -->
+			<label for="m">Enter value for m:</label>
+			<input type="text" id="m" name="m" required><br><br>
+
+			<!-- Dropdown select for k -->
+			<label for="k">Select value for k:</label>
+	        <select id="k" name="k" required>
+				{% for i in range(1, 11) %}
+				<option value="{{ i }}">{{ i }}</option>
+				{% endfor %}
+			</select><br><br>
+
+        <input type="submit" value="Submit">
+		</form>
+		
+		<h3>{{ ret_str }}</h3>
+	</body>
+</html>
