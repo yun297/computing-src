@@ -137,7 +137,7 @@ class BSTree:
         
         else: # tree is not empty
             left_size = self.count(current.left) # split left subtree again into left and right (recusive)
-            right_size = self.coutn(current.right) # split right subtree again into left and right (recursive)
+            right_size = self.count(current.right) # split right subtree again into left and right (recursive)
             return left_size + right_size + 1 # + 1 comes from the root of the tree
 
     def search(self, root, target):
