@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+	<head><title>Table</title></head>
+	
+	<body>
+		<h3>Filtered Results</h3>
+		
+		<table border>
+			<tr>
+				<th>Customer Name</th>
+				<th>Departure City</th>
+				<th>Arrival city</th>
+				<th>Seat Category</th>
+			</tr>
+			
+			{% for flight in flights %}
+			<tr>
+				{% for item in flight %}
+				<td>{{ item }}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
