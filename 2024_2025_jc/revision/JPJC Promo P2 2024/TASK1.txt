@@ -1,0 +1,5 @@
+To Kill a Mockingbird,Fiction,18.99
+1984,Dystopian,15.99
+The Great Gatsby,Classic,10.99
+The Catcher in the Rye,Fiction,12.99
+Brave New World,Dystopian,18.00

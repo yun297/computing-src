@@ -1,0 +1,17 @@
+linkedlist = LinkedList()
+
+node1 = Node()
+node1.title = "24K Magic"
+node1.artiste = "Bruno Mars"
+
+node2 = Node()
+node2.title = "Set Fire to the Rain"
+node2.artiste = "Adele"
+
+node3 = Node()
+node3.title = "Just the Way You Are"
+node3.artiste = "Bruno Mars"
+
+node4 = Node()
+node4.title = "Treasure"
+node4.artiste = "Bruno Mars"
