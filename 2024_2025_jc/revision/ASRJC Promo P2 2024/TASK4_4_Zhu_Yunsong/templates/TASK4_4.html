@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TASK4_4.html</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename = 'TASK4_4.css')}}">
+	</head>
+	<body>
+		<h1>Search Student Latecoming Records</h1>
+		<form action="/" method="POST">
+			<label for="name">Name of student: </label>
+			<input type="text" name="name" id="name"/>
+			<button type="submit">Submit</button>
+		</form>
+		
+		{% if result %}
+		<table border>
+			<tr>
+				<th>Date</th>
+				<th>Reason</th>
+			</tr>
+			
+			{% for row in result %}
+			<tr>
+				{% for col in row %}
+				<td>{{ col }}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+	</body>
+</html>
