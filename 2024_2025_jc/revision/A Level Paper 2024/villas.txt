@@ -1,0 +1,10 @@
+1,Rose,France,128
+2,Sea view,Australia,325
+3,Dolphin,New Zealand,490
+4,Flower haven,Mexico,580
+5,Mountain breeze,India,268
+6,Sunset,UK,136
+7,Moonlight,USA,358
+8,White brick,Italy,410
+9,Blue house,Germany,400
+10,Walled garden,Croatia,258
