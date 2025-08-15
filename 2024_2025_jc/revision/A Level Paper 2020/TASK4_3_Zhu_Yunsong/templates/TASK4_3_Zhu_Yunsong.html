@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Task 4.3</title>
+	</head>
+	
+	<body>
+		<h1>People List</h1>
+		<table border>
+			<tr>
+				<th>Name</th>
+				<th>Screen Name</th>
+				<th>Identity</th>
+			</tr>
+			
+			{% for row in data %}
+			<tr>
+				{% for col in row %}
+				<td>{{ col }}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
