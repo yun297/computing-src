@@ -16,7 +16,6 @@ def form():
         customer_name = request.form.get("customer-name")
         product_name = request.form.get("product-name")
         
-        
         fetched_rows = []
 
         conn = sqlite3.connect("database.db")
