@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Option 1</title>
+	</head>
+	<body>
+		<form action="/option1" method="POST">
+			<label for="patient_name">Patient Name</label>
+			<input type="text" name="patient_name" id="patient_name" />
+			<br><br>
+			<label for="appointment_date">Appointment Date</label>
+			<input type="text" name="appointment_date" id="appointment_date" />
+			<br><br>
+			<button type="submit">Search</button>
+		</form>
+		
+		{% if data: %}
+		<table border>
+			<tr><th>AppointmentID</th><td>{{ data[0][0] }}</td></tr>
+			<tr><th>PatientID</th><td>{{ data[0][1] }}</td></tr>
+			<tr><th>StaffID</th><td>{{ data[0][2] }}</td></tr>
+			<tr><th>AppointmentDate</th><td>{{ data[0][3] }}</td></tr>
+			<tr><th>Diagnosis</th><td>{{ data[0][4] }}</td></tr>
+			<tr><th>PatientName</th><td>{{ data[0][5] }}</td></tr>
+			<tr><th>StaffName</th><td>{{ data[0][6] }}</td></tr>
+		</table>
+		{% elif data == [] %}
+		<h1>No appointments found</h1>
+		{% endif %}
+	</body>
+</html>

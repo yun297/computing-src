@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Option 2</title>
+	</head>
+	<body>
+		{% if data: %}
+		<table border>
+			<tr>
+				<th>Staff Name</th>
+				<th>Staff Role</th>
+				<th>Number of Appointments Handled</th>
+			</tr>
+			
+			{% for row in data %}
+			<tr>
+				{% for col in row %}
+				<td>{{ col }}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+	</body>
+</html>
