@@ -1,8 +1,7 @@
-html { 
-	background-color: #2F8A7B;
-	color: white;
+table {
+  border: 2px orange;
 }
 
-table {
-	border-color: orange;
+body {
+  background-color: teal;
 }
