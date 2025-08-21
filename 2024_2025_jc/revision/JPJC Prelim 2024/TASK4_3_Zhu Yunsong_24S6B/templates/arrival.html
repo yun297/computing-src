@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+	<head><title>Arrival</title></head>
+	<body>
+		<h1>Arrival</h1>
+		
+		<table border>
+			<tr>
+				<th>Time</th>
+				<th>From</th>
+				<th>Flight</th>
+			</tr>
+			
+			{% for row in data %}
+			<tr>
+				{% for col in row %}
+				<td>{{ col }}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>

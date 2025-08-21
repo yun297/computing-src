@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+	<head><title>Query Flight</title></head>
+	<body>
+		<h1>Query Flight</h1>
+		
+		<form action="/query_flight" method="POST">
+			<label for"flight_num">Enter flightNum</label>
+			<input type="text" name="flight_num" id="flight_num" />
+			<button type="submit">Query</button>
+		</form>
+		
+		{% if data: %}
+		<table border>
+			<tr><th>flightNum</th><td>{{ data[0][0] }}</td></tr>
+			<tr><th>departure</th><td>{{ data[0][1] }}</td></tr>
+			<tr><th>destination</th><td>{{ data[0][2] }}</td></tr>
+			<tr><th>departureTime</th><td>{{ data[0][3] }}</td></tr>
+			<tr><th>arrivalTime</th><td>{{ data[0][4] }}</td></tr>
+		</table>
+		{% endif %}
+	</body>
+</html>
