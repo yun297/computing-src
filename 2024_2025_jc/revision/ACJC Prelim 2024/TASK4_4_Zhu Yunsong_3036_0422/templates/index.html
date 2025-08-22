@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Purchases in 2024</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename = 'index.css') }}"
+	</head>
+	<body>
+		<h1>Purchases in 2024</h1>
+		
+		<table border>
+			<tr>
+				<th>Customer Name</th>
+				<th>Item Name</th>
+				<th>Quantity</th>
+			</tr>
+			{% for row in data %}
+			<tr>
+				{% for col in row %}
+				<td>{{ col }}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
