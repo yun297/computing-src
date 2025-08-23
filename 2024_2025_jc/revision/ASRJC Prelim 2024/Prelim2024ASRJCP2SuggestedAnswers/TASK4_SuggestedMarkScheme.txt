@@ -1,0 +1,34 @@
+Task 4 Suggested Mark Scheme 
+(can vary depending on various approaches used as long as equivalent first principle processing logic evidence is shown)
+
+Task 4.1
+- correct function signature
+- correct condition for letter (case-insensitive)
+- correct action for letter (3)
+- correct condition/action or default case for non-letter
+- correct function call and output for case 1
+- correct function call and output for case 2
+
+Task 4.2
+- correct logic for letter (2)
+- correct function call and output for case 1
+- correct function call and output for case 2
+
+Task 4.3
+- import random and correct usage of randomising function
+- appropriate use of loop and condition
+- appropriate data structure processing
+- correct output 
+
+Task 4.4
+backend
+- correct import statement(s)
+- correct form input processing (2)
+- correct call to encryption function(s)
+- correct use of datetime module
+- uploads folder created
+- uploads.txt created and correct encrypted filenames written (2)
+frontend
+- html in templates folder
+- correct html form input for file upload
+- correct html output using jinja (2)

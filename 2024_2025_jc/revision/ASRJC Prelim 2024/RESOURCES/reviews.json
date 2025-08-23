@@ -1,0 +1,47 @@
+[
+    {
+        "product_id": "P5",
+        "product_name": "Ultra HD Smart TV",
+        "customer_id": "C1",
+        "rating": 5,
+        "review_text": "Amazing picture quality and smart features! The colors are vibrant and the interface is user-friendly.",
+        "review_date": "2024-08-28"
+    },
+    {
+        "product_id": "P3",
+        "product_name": "Ergonomic Office Chair",
+        "customer_id": "C2",
+        "rating": 4,
+        "review_text": "Very comfortable for long working hours. The lumbar support is great, but I wish the armrests were a bit more adjustable.",
+        "review_date": "2024-08-27"
+    },
+    {
+        "product_id": "P2",
+        "product_name": "Smartphone XYZ",
+        "customer_id": "C3",
+        "rating": 3,
+        "review_text": "Decent phone with good camera, but the battery life is less than I expected. It's okay for the price, but not outstanding.",
+        "review_date": "2024-08-26"
+    },
+    {
+        "product_id": "P4",
+        "product_name": "UltraBook Pro",
+        "customer_id": "C4",
+        "rating": 5,
+        "review_date": "2024-08-25"
+    },
+    {
+        "product_id": "P1",
+        "product_name": "Noise-Cancelling Headphones",
+        "customer_id": "C5",
+        "rating": 2,
+        "review_date": "2024-08-24"
+    },
+    {
+        "product_id": "P5",
+        "product_name": "Ultra HD Smart TV",
+        "customer_id": "C6",
+        "rating": 4,
+        "review_date": "2024-08-23"
+    }
+]

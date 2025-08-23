@@ -1,0 +1,20 @@
+P1,Noise-Cancelling Headphones,Electronics
+P2,Smartphone XYZ,Electronics
+P3,Ergonomic Office Chair,Furniture
+P4,UltraBook Pro,Electronics
+P5,Ultra HD Smart TV,Electronics
+P6,Wireless Mouse,Computer Accessories
+P7,Coffee Maker Deluxe,Kitchen Appliances
+P8,Fitness Tracker,Wearables
+P9,Portable Bluetooth Speaker,Audio
+P10,Electric Toothbrush,Personal Care
+P11,Robot Vacuum Cleaner,Home Appliances
+P12,Digital Camera,Electronics
+P13,Air Purifier,Home Appliances
+P14,Gaming Console,Electronics
+P15,Wireless Earbuds,Audio
+P16,Smartwatch,Wearables
+P17,Blender,Kitchen Appliances
+P18,Laptop Stand,Computer Accessories
+P19,Wireless Keyboard,Computer Accessories
+P20,External SSD,Computer Accessories
