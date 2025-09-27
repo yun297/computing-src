@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Round {{ number }}</title>
+	</head>
+
+	<body>
+		<h1>Round {{ number }} Scores</h1>
+
+		<table border>
+			<tr>
+				<th>Name</th>
+				<th>Score</th>
+			</tr>
+
+			{% for row in data %}
+			<tr>
+				{% for col in row %}
+				<td>{{ col }}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
