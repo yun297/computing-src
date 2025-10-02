@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head><title>Task 4.3</title></head>
+	
+	<body>
+		<table border>
+			{% for row in data %}
+			<tr>
+				{% for col in row %}
+					<td style="background-color: {{ col }}; width:36px; height:36px;"></td>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
