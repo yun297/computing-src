@@ -1,0 +1,5 @@
+heading: Horses
+subheading: Colours
+paragraph: There are lots of different colours of horse, for example black, dun, chestnut and grey.
+subheading: Breeds
+paragraph: There are also different breeds of horse, for example Thoroughbred, Shire and Haflinger.

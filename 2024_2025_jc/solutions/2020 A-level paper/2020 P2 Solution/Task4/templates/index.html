@@ -1,0 +1,63 @@
+<!--
+Folder Structure
+Task4
+	static
+		->styles.css
+	templates
+		->index.html
+	school.db
+	people.txt
+
+	Task4_2.py
+	Task4_3.py
+	
+File :templates/index.html
+-->
+<!DOCTYPE html>
+<html>
+<head><title>People List</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+<p>Screen Name</p>
+<table>
+<tr><th>Full Name</th><th>Screen Name</th><th>Identity</th></tr>
+{% if results|length > 0 %}
+	{% for item in results  %}
+    <tr>
+        <td>{{ item.getFullName() }}</td>
+		<td>{{ item.screen_name() }}</td>
+		<td>{{ item.identity() }}</td>
+    </tr>
+	{% endfor %}
+{%else%}
+    <tr>
+        <td colspan="2">No Items</td>
+    </tr>
+{%endif%}
+</table>
+</body>
+</html>
+
+<!--
+
+File :static/styles.css
+
+body{
+	font-family:sans-serif;
+	text-align:center;
+	
+}
+
+table{
+	border-collapse:collapse;
+	margin:auto;
+	
+}
+
+th,td{
+	border: 1px solid black;
+	padding:5px;
+}
+
+-->

@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Decompressed image</title>
+		<!-- use style here or css -->
+		<style>
+			td {
+				width: 30px;
+				height: 30px;
+			} <!-- need to be 30px or it is too small without text -->
+		</style>
+	</head>
+	<body>
+		<table border> <!-- for borders -->
+			{% for row in data %}
+			<tr>
+				{% for cell in row %}
+				<td style="background-color:{{cell}}"></td> <!-- or print {{cell}} in td -->
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
