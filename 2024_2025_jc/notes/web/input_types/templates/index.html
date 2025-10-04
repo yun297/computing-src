@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Index</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}"/>
+	</head>
+	
+	<body>
+		<h1>Form</h1>
+		<form action="/handle_request" method="POST">
+			<label for="text_input">Text input:</label>
+			<input type="text" id="text_input" name="text_input" placeholder="Enter text here..."/>
+			<br><br>
+			
+			<label for="date_input">Date input:</label>
+			<input type="date" id="date_input" name="date_input"/>
+			<br><br>
+			
+			<label for="select_input">Select input:</label>
+			<select id="select_input" name="select_input">
+				<option value="1">Option 1</option>
+				<option value="2">Option 2</option>
+				<option value="3">Option 3</option>
+			</select>
+			<br><br>
+			
+			<input type="radio" id="radio_1" value="1" name="radio_input"/>
+			<label for="radio_1">Option 1</label><br>
+			
+			<input type="radio" id="radio_2" value="2" name="radio_input"/>
+			<label for="radio_2">Option 2</label><br>
+			
+			<input type="radio" id="radio_3" value="3" name="radio_input"/>
+			<label for="radio_3">Option 3</label><br><br>
+			
+			<input type="checkbox" id="checkbox_1" value="1" name="checkbox_input"/>
+			<label for="checkbox_1">Option 1</label><br>
+			
+			<input type="checkbox" id="checkbox_2" value="2" name="checkbox_input"/>
+			<label for="checkbox_2">Option 2</label><br>
+			
+			<input type="checkbox" id="checkbox_3" value="3" name="checkbox_input"/>
+			<label for="checkbox_3">Option 3</label><br><br>
+			
+			<button type="submit">Submit</button>
+		
+		</form>
+	</body>
+</html>

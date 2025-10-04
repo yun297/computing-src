@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Index</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}"/>
+	</head>
+	
+	<body>
+		<h1>Text input</h1>
+		<p>{{ data[0] }}</p>
+		
+		<h1>Date input</h1>
+		<p>{{ data[1] }}</p>
+		
+		<h1>Select input</h1>
+		<p>{{ data[2] }}</p>
+		
+		<h1>Radio input</h1>
+		<p>{{ data[3] }}</p>
+		
+		<h1>Checkbox input</h1>
+		<table border>
+			<tr><th>Inputs</th></tr>
+			{% for item in data[4] %}
+			<tr><td>{{ item }}</td></tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>
