@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+	<head><title>Add.html</title></head>
+	
+	<body>
+		<h1>Add</h1>
+		<form action="/confirm" method="POST">
+			<label for="customer-name">Customer Name</label>
+			<select name="customer-name" id="customer-name">
+				<option value="1">Ali</option>
+				<option value="2">Ben</option>
+				<option value="3">Chloe</option>
+			</select>
+			<br><br>
+			<label for="product-name">Product Name</label>
+			<select name="product-name" id="product-name">
+				<option value="1">Pen</option>
+				<option value="2">Book</option>
+				<option value="3">Bag</option>
+			</select>
+			<br><br>
+			<label for="quantity">Quantity</label>
+			<input type="number" name="quantity" id="quantity"/>
+			<br><br>
+			<button type="submit">Submit</button>
+		</form>
+	</body>
+</html>
