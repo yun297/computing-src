@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Index</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename = 'style.css') }}"
+    />
+  </head>
+
+  <body>
+    <h1>Image</h1>
+
+    <h2>Using inline styles</h2>
+    <table>
+      {% for row in image_arr %}
+      <tr>
+        {% for col in row %}
+        <!-- inline styles -->
+        <td
+          style="background-color: {{ col }}; height: 10px; width: 10px;"
+        ></td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h2>Using classes</h2>
+    <table>
+      {% for row in image_arr %}
+      <tr>
+        {% for col in row %}
+        <!-- using classes, where the class name is the colour of the cell -->
+        <td class="{{ col }}"></td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+
+    <h1>Form</h1>
+    <form action="/" method="POST">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
