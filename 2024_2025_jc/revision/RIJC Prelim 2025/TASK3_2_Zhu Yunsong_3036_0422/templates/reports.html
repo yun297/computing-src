@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+	<head><title>Reports</title></head>
+	
+	<body>
+		<h1>Reports</h1>
+		
+		<table border>
+			<tr>
+				<th>Item Name</th>
+				<th>Description</th>
+				<th>Category</th>
+				<th>Date Lost</th>
+				<th>Location</th>
+				<th>Recovered</th>
+			</tr>
+			
+			{% for row in data %}
+			<tr>
+				<td>{{ row["item_name"] }}</td>
+				<td>{{ row["description"] }}</td>
+				<td>{{ row["category"] }}</td>
+				<td>{{ row["date_lost"] }}</td>
+				<td>{{ row["location"] }}</td>
+				<td>{{ row["recovered"] }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head><title>Search Lost Items</title></head>
+<body>
+    <h2>Search Lost Items</h2>
+    <form method="GET">
+        Category: <input type="text" name="category">
+        Date Lost: <input type="text" name="date_lost">
+        <input type="submit" value="Search">
+    </form>
+    <br>
+    {% if reports %}
+    <table border="1">
+        <tr><th>Item</th><th>Description</th><th>Category</th><th>Date Lost</th><th>Location</th>
+        {% for report in reports %}
+        <tr>
+            <td>{{ report.item_name }}</td>
+            <td>{{ report.description }}</td>
+            <td>{{ report.category }}</td>
+            <td>{{ report.date_lost }}</td>
+            <td>{{ report.location }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    <br><a href="/submit">Submit Another Report</a>
+    <br><a href="/reports">Reports</a>
+</body>
+</html>

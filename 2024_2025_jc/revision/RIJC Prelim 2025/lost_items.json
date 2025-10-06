@@ -1,0 +1,162 @@
+[
+    {
+        "item_name": "Marker pack",
+        "description": "Marker pack was left near the Computer Lab.",
+        "category": "Stationery",
+        "date_lost": "2025-07-20",
+        "location": "Computer Lab",
+        "recovered": false
+    },
+    {
+        "item_name": "Smartwatch",
+        "description": "Smartwatch was left near the Canteen.",
+        "category": "Electronics",
+        "date_lost": "2025-07-28",
+        "location": "Canteen",
+        "recovered": false
+    },
+    {
+        "item_name": "Track pants",
+        "description": "Track pants was left near the Toilet.",
+        "category": "Clothing",
+        "date_lost": "2025-07-05",
+        "location": "Toilet",
+        "recovered": false
+    },
+    {
+        "item_name": "Calculator",
+        "description": "Calculator was left near the Library.",
+        "category": "Electronics",
+        "date_lost": "2025-07-13",
+        "location": "Library",
+        "recovered": false
+    },
+    {
+        "item_name": "Tablet",
+        "description": "Tablet was left near the Library.",
+        "category": "Electronics",
+        "date_lost": "2025-07-11",
+        "location": "Library",
+        "recovered": false
+    },
+    {
+        "item_name": "Chemistry notes",
+        "description": "Chemistry notes was left near the Field.",
+        "category": "Books",
+        "date_lost": "2025-07-24",
+        "location": "Field",
+        "recovered": false
+    },
+    {
+        "item_name": "Track pants",
+        "description": "Track pants was left near the Field.",
+        "category": "Clothing",
+        "date_lost": "2025-07-21",
+        "location": "Field",
+        "recovered": false
+    },
+    {
+        "item_name": "School tie",
+        "description": "School tie was left near the Staff Room.",
+        "category": "Clothing",
+        "date_lost": "2025-07-02",
+        "location": "Staff Room",
+        "recovered": false
+    },
+    {
+        "item_name": "Tablet",
+        "description": "Tablet was left near the Classroom Block A.",
+        "category": "Electronics",
+        "date_lost": "2025-07-03",
+        "location": "Classroom Block A",
+        "recovered": false
+    },
+    {
+        "item_name": "Chemistry notes",
+        "description": "Chemistry notes was left near the Field.",
+        "category": "Books",
+        "date_lost": "2025-07-14",
+        "location": "Field",
+        "recovered": false
+    },
+    {
+        "item_name": "Pen box",
+        "description": "Pen box was left near the Field.",
+        "category": "Stationery",
+        "date_lost": "2025-07-13",
+        "location": "Field",
+        "recovered": false
+    },
+    {
+        "item_name": "Hairband",
+        "description": "Hairband was left near the Hall.",
+        "category": "Accessories",
+        "date_lost": "2025-07-30",
+        "location": "Hall",
+        "recovered": false
+    },
+    {
+        "item_name": "Black hoodie",
+        "description": "Black hoodie was left near the Canteen.",
+        "category": "Clothing",
+        "date_lost": "2025-07-23",
+        "location": "Canteen",
+        "recovered": false
+    },
+    {
+        "item_name": "Pencil case",
+        "description": "Pencil case was left near the Canteen.",
+        "category": "Stationery",
+        "date_lost": "2025-07-17",
+        "location": "Canteen",
+        "recovered": false
+    },
+    {
+        "item_name": "Wireless earphones",
+        "description": "Wireless earphones was left near the Classroom Block A.",
+        "category": "Electronics",
+        "date_lost": "2025-07-19",
+        "location": "Classroom Block A",
+        "recovered": false
+    },
+    {
+        "item_name": "Wallet",
+        "description": "Wallet was left near the Field.",
+        "category": "Accessories",
+        "date_lost": "2025-07-31",
+        "location": "Field",
+        "recovered": false
+    },
+    {
+        "item_name": "Scientific calculator",
+        "description": "Scientific calculator was left near the Library.",
+        "category": "Stationery",
+        "date_lost": "2025-07-02",
+        "location": "Library",
+        "recovered": false
+    },
+    {
+        "item_name": "Blue PE T-shirt",
+        "description": "Blue PE T-shirt was left near the Staff Room.",
+        "category": "Clothing",
+        "date_lost": "2025-07-15",
+        "location": "Staff Room",
+        "recovered": false
+    },
+    {
+        "item_name": "Scientific calculator",
+        "description": "Scientific calculator was left near the Staff Room.",
+        "category": "Stationery",
+        "date_lost": "2025-07-31",
+        "location": "Staff Room",
+        "recovered": false
+    },
+    {
+        "item_name": "Track pants",
+        "description": "Track pants was left near the Computer Lab.",
+        "category": "Clothing",
+        "date_lost": "2025-07-03",
+        "location": "Computer Lab",
+        "recovered": false
+    }
+]

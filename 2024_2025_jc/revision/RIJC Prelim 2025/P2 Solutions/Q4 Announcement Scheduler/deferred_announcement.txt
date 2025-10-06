@@ -1,0 +1,3 @@
+Wellness,Medium,180,Mental Health Talk
+ICT,Medium,100,Digital Literacy Week Launch
+Art,Low,90,Art Exhibition Invite

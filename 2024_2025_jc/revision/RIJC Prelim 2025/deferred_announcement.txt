@@ -1,0 +1,14 @@
+Sports,Medium,120,Track Meet Registration
+
+Wellness,Medium,180,Mental Health Talk
+
+Sports,Medium,120,Track Meet Registration
+
+Wellness,Medium,180,Mental Health Talk
+
+Art,Low,90,Art Exhibition Invite
+CCA,Low,60,Guitar Club Meeting
+
+Leadership,Low,45,Student Council Promo
+
+Art,Low,90,Art Exhibition Invite

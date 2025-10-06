@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+	<head><title>Search Lost Item</title></head>
+	
+	<body>
+		<h1>Search Lost Item</h1>
+		
+		<form action="search" method="POST">
+			<label for="category">Category: </label>
+			<input type="text" id="category" name="category" />
+			<br>
+			
+			<label for="date_lost">Date Lost: </label>
+			<input type="text" id="date_lost" name="date_lost" />
+			<br>
+			
+			<button type="submit">Submit</button>
+		</form>
+		
+		{% if data %}
+		<table border>
+			<tr>
+				<th>Item Name</th>
+				<th>Description</th>
+				<th>Category</th>
+				<th>Date Lost</th>
+				<th>Location</th>
+				<th>Recovered</th>
+			</tr>
+			
+			{% for row in data %}
+			<tr>
+				<td>{{ row["item_name"] }}</td>
+				<td>{{ row["description"] }}</td>
+				<td>{{ row["category"] }}</td>
+				<td>{{ row["date_lost"] }}</td>
+				<td>{{ row["location"] }}</td>
+				<td>{{ row["recovered"] }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+		{% endif %}
+	</body>
+</html>

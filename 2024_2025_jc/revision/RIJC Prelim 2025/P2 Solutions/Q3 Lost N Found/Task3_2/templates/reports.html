@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head><title>All Lost Items</title></head>
+<body>
+    <h2>All Lost Item Reports</h2>
+    <table border="1">
+        <tr>
+            <th>Item</th><th>Description</th><th>Category</th><th>Date Lost</th><th>Location</th>
+            
+        </tr>
+        {% for report in reports %}
+        
+        <tr>
+            <td>{{ report.item_name }}</td>
+            <td>{{ report.description }}</td>
+            <td>{{ report.category }}</td>
+            <td>{{ report.date_lost }}</td>
+            <td>{{ report.location }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br><a href="/submit">Submit Another Report</a>
+    <br><a href="/search">Search</a>
+
+</body>
+</html>

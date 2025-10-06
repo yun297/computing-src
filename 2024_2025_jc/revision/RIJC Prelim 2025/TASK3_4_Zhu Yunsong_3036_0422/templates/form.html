@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+	<head><title>Submit Lost Item</title></head>
+	
+	<body>
+		<h1>Submit Lost Item</h1>
+		
+		<form action="submit" method="POST">
+			<label for="item_name">Item Name: </label>
+			<input type="text" id="item_name" name="item_name" required />
+			<br>
+			
+			<label for="description">Description: </label>
+			<input type="text" id="description" name="description" required />
+			<br>
+			
+			<label for="category">Category: </label>
+			<input type="text" id="category" name="category" required />
+			<br>
+			
+			<label for="date_lost">Date Lost: </label>
+			<input type="text" id="date_lost" name="date_lost" required />
+			<br>
+			
+			<label for="location">Location: </label>
+			<input type="text" id="location" name="location" required />
+			<br>
+			
+			<button type="submit">Submit</button>
+		</form>
+		
+		{% if wrong_format %}
+		<p style="color: red;">Ensure that date is of the right format!</p>
+		{% endif %}
+	</body>
+</html>
