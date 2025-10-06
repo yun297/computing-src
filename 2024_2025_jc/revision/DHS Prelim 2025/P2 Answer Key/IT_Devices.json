@@ -1,0 +1,88 @@
+[
+	{
+		"Serial_Number": "LAP-001",
+		"Type": "Laptop",
+		"Brand": "HP",
+		"Cost": 1099,
+		"Date_Of_Purchase": "2022-02-10",
+		"Weight": 1.35,
+		"Screen_Size": 14
+	},
+	{
+		"Serial_Number": "LAP-002",
+		"Type": "Laptop",
+		"Brand": "Lenovo",
+		"Cost": 1599,
+		"Date_Of_Purchase": "2023-09-18",
+		"Weight": 2.45,
+		"Screen_Size": 16
+	},
+	{
+		"Serial_Number": "LAP-003",
+		"Type": "Laptop",
+		"Brand": "Apple",
+		"Cost": 1899,
+		"Date_Of_Purchase": "2024-05-25",
+		"Weight": 1.25,
+		"Screen_Size": 14
+	},
+	{
+		"Serial_Number": "LAP-004",
+		"Type": "Laptop",
+		"Brand": "Dell",
+		"Cost": 1249,
+		"Date_Of_Purchase": "2022-01-08",
+		"Weight": 1.55,
+		"Screen_Size": 14
+	},
+	{
+		"Serial_Number": "LAP-005",
+		"Type": "Laptop",
+		"Brand": "ASUS",
+		"Cost": 2199,
+		"Date_Of_Purchase": "2023-12-03",
+		"Weight": 2.6,
+		"Screen_Size": 17
+	},
+	{
+		"Serial_Number": "LAP-006",
+		"Type": "Laptop",
+		"Brand": "Acer",
+		"Cost": 999,
+		"Date_Of_Purchase": "2024-06-12",
+		"Weight": 1.45,
+		"Screen_Size": 15
+    },
+	{
+		"Serial_Number": "TAB-001",
+		"Type": "Tablet",
+		"Brand": "Samsung",
+		"Cost": 599,
+		"Date_Of_Purchase": "2022-03-15",
+		"Battery_Capacity": 8000
+	},
+	{
+		"Serial_Number": "TAB-002",
+		"Type": "Tablet",
+		"Brand": "Apple",
+		"Cost": 799,
+		"Date_Of_Purchase": "2023-11-05",
+		"Battery_Capacity": 9720
+	},
+	{
+		"Serial_Number": "TAB-003",
+		"Type": "Tablet",
+		"Brand": "HP",
+		"Cost": 999,
+		"Date_Of_Purchase": "2024-07-22",
+		"Battery_Capacity": 5700
+	},
+	{
+		"Serial_Number": "TAB-004",
+		"Type": "Tablet",
+		"Brand": "Lenovo",
+		"Cost": 429,
+		"Date_Of_Purchase": "2022-09-02",
+		"Battery_Capacity": 7500
+	}
+]

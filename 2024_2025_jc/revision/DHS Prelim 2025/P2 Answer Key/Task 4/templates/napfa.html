@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+	<head>
+		<title>NAPFA Results</title> <!-- 1 mark - html title -->
+	</head>
+	<body>
+	
+		<form action="{{url_for('home')}}" method="post"> <!-- 1 mark - created html form with right action & POST method -->
+			
+			<h2>Station:</h2><!-- 1 mark - created radio button for Station correctly -->
+			<input type="radio" name="station" value="sit_up" checked>Sit Ups<br>
+			<input type="radio" name="station" value="standing_broad_jump">Standing Broad Jump<br>
+			<input type="radio" name="station" value="sit_and_reach">Sit And Reach<br>
+			<input type="radio" name="station" value="pull_ups">Pull-ups/Inclined Pull-ups<br>
+			<input type="radio" name="station" value="shuttle_run">Shuttle Run<br>
+			<input type="radio" name="station" value="2.4km_run">2.4km Run<br>
+			
+			<h2>Order by:</h2><!-- 1 mark - created radio button for Order by correctly -->
+			<input type="radio" name="order" value="ascending" checked>Ascending<br>
+			<input type="radio" name="order" value="descending">Descending<br>
+			
+			<br>
+			<input type="submit"><!-- 1 mark - created submit button correctly -->
+		
+		<br><br>
+		<h2>NAPFA Results:</h2>
+		<table border='1' style='border-collapse:collapse'><!-- 1 mark - table with border-->
+			<tr>
+				<th>Student Name</th><!-- 1 mark - created table headers correctly -->
+				<th>Gender</th>
+				<th>Sit Ups</th>
+				<th>Standing Broad Jump</th>
+				<th>Sit And Reach</th>
+				<th>Pull-ups/Inclined Pull-ups</th>
+				<th>Shuttle Run</th>
+				<th>2.4km Run</th>
+			</tr>
+			{% for record in html_records %} <!-- 1 mark - loop records using Jinja to populate the html table -->
+				<tr>
+					<td>{{record[0]}}</td>
+					<td>{{record[1]}}</td>
+					<td>{{record[2]}}</td>
+					<td>{{record[3]}}</td>
+					<td>{{record[4]}}</td>
+					<td>{{record[5]}}</td>
+					<td>{{record[6]}}</td>
+					<td>{{record[7]}}</td>
+				</tr>
+			{% endfor %} <!--Remember to endfor when using Jinja's for loop-->
+		</table>
+
+	</body>
+</html>
